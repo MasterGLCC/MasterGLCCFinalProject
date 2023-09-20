@@ -26,7 +26,7 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 - **Build Tools :** Apache Maven.
 --------------------------------------------------------------------------------------------------
 ### Contribution au Projet :
-### *Note: Chaque equipe a le droit de creer une seule branche*.
+### *Note: Chaque groupe a le droit de creer une seule branche*.
 - **Cloner le Projet:**
 `git clone https://github.com/MehdiGLCC/MasterGLCCFinalProject.git` 
 - **Creation de votre Branche:** 
