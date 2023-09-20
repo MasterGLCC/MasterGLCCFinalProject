@@ -28,6 +28,6 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 ### Contribution au Projet :
 - **Cloner le Projet.** 
 - **Creation de votre Branche.** 
-- **Soummetre une demande de Pull Request.** 
+- **Soumetre une demande de Pull Request.** 
 
 -----------------------------------------------------------------------------------------------------------------
