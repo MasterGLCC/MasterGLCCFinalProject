@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="" />
+    <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TestContorller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/TestEntities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/TestRepositories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -124,11 +139,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695238157388</updated>
-      <workItem from="1695238158439" duration="2212000" />
+      <workItem from="1695238158439" duration="2978000" />
     </task>
+    <task id="LOCAL-00001" summary="GLCC Project">
+      <created>1695240505028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695240505028</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="GLCC Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="GLCC Project" />
   </component>
 </project>
