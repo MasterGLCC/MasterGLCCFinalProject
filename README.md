@@ -24,10 +24,19 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 - **Front End** : Boostrap version 5.
 - **Database** : Base de données du type relationnelle Mysql .
 - **Build Tools :** Apache Maven.
----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 ### Contribution au Projet :
-- **Cloner le Projet.** 
-- **Creation de votre Branche.** 
-- **Soumetre une demande de Pull Request.** 
+### *Note: Chaque equipe a le droit de creer une seule branche*.
+- **Cloner le Projet:**
+`git clone https://github.com/MehdiGLCC/MasterGLCCFinalProject.git` 
+- **Creation de votre Branche:** 
+`git branch GLCC_Titre_De_Tache`
+- **Mettre a jour votre propre branche local "develop":** 
+`git checkout develop`
+`git pull origin develop` // `git pull --rebase`
+- **Commiter régulièrement le travail au cours du développement**:
+`git add -A` 
+`git commit -m "# message décrivant le commit"`
+`git push`
 
------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
