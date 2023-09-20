@@ -23,3 +23,11 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 - **Back End** : Java version 8 et avec l'ecosystem Spring .
 - **Front End** : Boostrap version 5.
 - **Database** : Base de données du type relationnelle Mysql .
+- **Build Tools :** Apache Maven.
+---------------------------------------------------------------------------------------------------
+### Contribution au Projet :
+- **Cloner le Projet.** 
+- **Creation de votre Branche.** 
+- **Soummetre une demande de Pull Request.** 
+
+-----------------------------------------------------------------------------------------------------------------
