@@ -1,3 +1,8 @@
+![logo-fs-Kenitra](https://github.com/MasterGLCC/MasterGLCCFinalProject/assets/145581157/bcf2169f-6bd1-447e-bcdd-ec746cf2adc0)
+
+------------
+
+
 ## Projet de Gestion des Activités Doctorales dans un Laboratoire.
 
 ### Description du Projet :
