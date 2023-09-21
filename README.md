@@ -20,6 +20,7 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 
 ---------------------------------------------------------------------------------------------------
 ### Technologies Utilisées:
+### *Note: Veuillez respecter les spécifications techniques du projet*.
 - **Back End** : Java version 8 et avec l'ecosystem Spring .
 - **Front End** : Boostrap version 5.
 - **Database** : Base de données du type relationnelle Mysql .
