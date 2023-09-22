@@ -34,7 +34,7 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 ### Contribution au Projet :
 ### *Note: Chaque groupe a le droit de creer une seule branche*.
 - **Cloner le Projet:**
-`git clone https://github.com/MehdiGLCC/MasterGLCCFinalProject.git` 
+`git clone https://github.com/MasterGLCC/MasterGLCCFinalProject.git` 
 - **Creation de votre Branche:** 
 `git branch GLCC_Titre_De_Tache`
 - **Mettre a jour votre propre branche local "develop":** 
