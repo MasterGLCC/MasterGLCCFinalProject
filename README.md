@@ -46,3 +46,6 @@ L'objectif principal de ce système est de fournir une solution efficace et cent
 `git push`
 
 ---------------------------------------------------------------------------------------------------
+### Conception du projet :
+### *Note: Veullez respecter les conventions de nommage*.
+![ClassDiagrammSpringProject](https://github.com/y33-j3T/Coursera-Deep-Learning/assets/145581157/7a34339c-4ef7-452b-bf80-a22e42ccbd16)
