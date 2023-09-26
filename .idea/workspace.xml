@@ -5,12 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TestContorller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/TestEntities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/TestRepositories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Absence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Auteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/AxeRecherche.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Commentaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Departement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Diplome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Doctorant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/DossierDoctorant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/EtatAvancement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Forum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/MembreJury.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Personne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Professeur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Publication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Reference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Reunion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/SoutenanceThese.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/SujetThese.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/SuperAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Grade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/PublicationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/ReferenceType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/TestContorller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/TestEntities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/TestEntities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/enums/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/TestRepositories.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/TestRepositories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/TestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +90,9 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -88,9 +119,10 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/fatim/Desktop/hicham/miniprojet-JEESpringJPA/MasterGLCCFinalProject",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/Stage/tts_corest_jvm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,6 +134,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="entities" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
@@ -109,7 +146,7 @@
       <command value="mvn clean install -DskipTests" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ActivitesdoctorantsApplication (1)">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="MasterGLCCFinalProject" />
       <method v="2">
@@ -119,6 +156,13 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="MasterGLCCFinalProject" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivitesdoctorantsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MasterGLCCFinalProject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.MGLC.activitesdoctorants.ActivitesdoctorantsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695238157388</updated>
       <workItem from="1695238158439" duration="2978000" />
+      <workItem from="1695529954417" duration="16398000" />
     </task>
     <task id="LOCAL-00001" summary="GLCC Project">
       <created>1695240505028</created>
