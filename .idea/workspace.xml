@@ -5,12 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TestContorller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/TestEntities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/TestRepositories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MasterGLCCFinalProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/AbsenceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/DoctorantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/MeetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/AbsenceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/DoctorantDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/MeetingDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/ProfesseurDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/SujetTheseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/AbsenceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/DoctorantRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/MeetingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/ProfesseurRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/AbsenceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/DoctorantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/MeetingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/ProfesseurService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/SujetTheseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TestEntities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/TestRepositories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/TestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/TestContorller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/TestEntities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/TestRepositories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/TestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +63,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -69,11 +112,17 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: -1
+}</component>
   <component name="ProjectId" id="2VfrpLcbEP97AWJrUXAM2IT8rpY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -81,15 +130,21 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/fatim/Desktop/hicham/miniprojet-JEESpringJPA/MasterGLCCFinalProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,6 +154,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "74abe708c1054244be596bbc59a1b6c7",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -110,19 +166,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="MasterGLCCFinalProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="MasterGLCCFinalProject" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ActivitesdoctorantsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="activitesdoctorants" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.MGLC.activitesdoctorants.ActivitesdoctorantsApplication" />
@@ -140,6 +183,8 @@
       <option name="presentableId" value="Default" />
       <updated>1695238157388</updated>
       <workItem from="1695238158439" duration="2978000" />
+      <workItem from="1696437174313" duration="5231000" />
+      <workItem from="1696462809420" duration="3055000" />
     </task>
     <task id="LOCAL-00001" summary="GLCC Project">
       <created>1695240505028</created>
@@ -154,7 +199,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="GLCC Project" />
     <option name="LAST_COMMIT_MESSAGE" value="GLCC Project" />
   </component>
