@@ -16,12 +16,14 @@ public class Professeur {
     @Column(nullable = false)
     private String prenom;
 
-    // Add more fields as needed
     @Column(nullable = false)
     private String email;
 
     @Column(nullable = false)
     private String phoneNumber;
+
+    @OneToMany(mappedBy = "directeurThese")
+    private List<Doctorant> doctorantsDirectes;
 
     // Constructors, getters, setters, and any other methods
 
@@ -30,11 +32,24 @@ public class Professeur {
     }
 
     // Add other constructors as needed
-    public Professeur(String nom, String prenom, String email, String phoneNumber) {
+
+    // Getter and Setter methods for other fields
+    // Implement getter and setter methods for other fields
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
         this.prenom = prenom;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -53,28 +68,6 @@ public class Professeur {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    @OneToMany(mappedBy = "directeurThese")
-    private List<Doctorant> doctorantsDirectes;
-
-    @OneToMany(mappedBy = "coDirecteurThese")
-    private List<Doctorant> doctorantsCoDirectes;
-
     public List<Doctorant> getDoctorantsDirectes() {
         return doctorantsDirectes;
     }
@@ -82,14 +75,4 @@ public class Professeur {
     public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
         this.doctorantsDirectes = doctorantsDirectes;
     }
-
-    public List<Doctorant> getDoctorantsCoDirectes() {
-        return doctorantsCoDirectes;
-    }
-
-    public void setDoctorantsCoDirectes(List<Doctorant> doctorantsCoDirectes) {
-        this.doctorantsCoDirectes = doctorantsCoDirectes;
-    }
-
-    // Implement getter and setter methods for other fields
 }

@@ -16,13 +16,16 @@ public class SujetThese {
     @Column(nullable = false)
     private String description;
 
-    // Add more fields as needed
-    // For example:
     @Column(nullable = false)
     private String motsCles;
 
-    @ManyToMany(mappedBy = "sujetsThese")
-    private List<Doctorant> doctorants;
+    @ManyToMany
+    @JoinTable(
+            name = "doctorant_sujet",
+            joinColumns = @JoinColumn(name = "sujet_id"),
+            inverseJoinColumns = @JoinColumn(name = "doctorant_id")
+    )
+    private List<Doctorant> doctorantsDirectes;
 
     // Constructors, getters, setters, and any other methods
 
@@ -31,27 +34,9 @@ public class SujetThese {
     }
 
     // Add other constructors as needed
-    public SujetThese(String titre, String description, String motsCles) {
-        this.titre = titre;
-        this.description = description;
-        this.motsCles = motsCles;
-    }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getMotsCles() {
-        return motsCles;
-    }
-
-    public void setMotsCles(String motsCles) {
-        this.motsCles = motsCles;
-    }
+    // Getter and Setter methods for other fields
+    // Implement getter and setter methods for other fields
 
     public String getTitre() {
         return titre;
@@ -69,11 +54,19 @@ public class SujetThese {
         this.description = description;
     }
 
-    public List<Doctorant> getDoctorants() {
-        return doctorants;
+    public String getMotsCles() {
+        return motsCles;
     }
 
-    public void setDoctorants(List<Doctorant> doctorants) {
-        this.doctorants = doctorants;
+    public void setMotsCles(String motsCles) {
+        this.motsCles = motsCles;
+    }
+
+    public List<Doctorant> getDoctorantsDirectes() {
+        return doctorantsDirectes;
+    }
+
+    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
+        this.doctorantsDirectes = doctorantsDirectes;
     }
 }
