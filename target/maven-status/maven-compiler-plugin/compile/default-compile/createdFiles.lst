@@ -1,0 +1,6 @@
+enums\Status.class
+controllers\TestContorller.class
+services\TestService.class
+repositories\TestRepositories.class
+entities\TestEntities.class
+com\MGLC\activitesdoctorants\ActivitesdoctorantsApplication.class

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_10_2_3_jre8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_79.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_79.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_79.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_15_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_15_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activitesdoctorants.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/configuration/DemoDataConf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/DoctorantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/DoctorantRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/AbsenceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/DoctorantDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/EtatDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/PublicationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/YearlyAbsenceCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Auteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/AuteurPublication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/DoctorantPublication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/DossierDoctorant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/EtatAvancement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Personne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Publication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Reunion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/Année.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/ProfessorGrade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/PublicationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/AbsenceRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/AuteurPublicationRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/AuteurRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/DoctorantPublicationRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/DoctorantRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/DossierDoctorantRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/EtatAvancementRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/PersonRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/PersonneRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/ProfesseurRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/PublicationRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/ReunionRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/DemoDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/DoctorantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/DoctorantServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/SujetTheseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pdf/article1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pdf/article2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pdf/article3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pdf/certificat1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pdf/certificat2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pdf/certificat3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/zip-file-document-variant-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/zip/sourcecode.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/base-layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/doctorant/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/pdf/article1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/pdf/article2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/pdf/article3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/pdf/certificat1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/pdf/certificat2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/pdf/certificat3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/zip-file-document-variant-svgrepo-com.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/zip/sourcecode.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/base-layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/doctorant/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TestEntities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/TestRepositories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/TestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/TestContorller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/TestEntities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/TestRepositories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/TestService.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="devlop" />
+                    <option name="lastUsedInstant" value="1695238220" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Dev" />
+                    <option name="lastUsedInstant" value="1695238193" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1695238192" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2VfrpLcbEP97AWJrUXAM2IT8rpY" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/JavaEEProjects/TutoProjects/MasterGLCCFinalProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "74abe708c1054244be596bbc59a1b6c7",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaEEProjects\TutoProjects\MasterGLCCFinalProject\src\main\resources\static\pdf" />
+      <recent name="D:\JavaEEProjects\TutoProjects\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants" />
+      <recent name="D:\JavaEEProjects\TutoProjects\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services" />
+      <recent name="D:\JavaEEProjects\TutoProjects\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories" />
+      <recent name="D:\JavaEEProjects\TutoProjects\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaEEProjects\TutoProjects\MasterGLCCFinalProject\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.MGLC.activitesdoctorants" />
+      <recent name="com.MGLC.activitesdoctorants.enums" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn clean install mvn clean install " />
+      <command value="mvn clean install -DskipTests" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ActivitesdoctorantsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="activitesdoctorants" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.MGLC.activitesdoctorants.ActivitesdoctorantsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="" />
+      <created>1695238157388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695238157388</updated>
+      <workItem from="1695238158439" duration="2978000" />
+      <workItem from="1695741103364" duration="8528000" />
+      <workItem from="1695756738352" duration="1823000" />
+      <workItem from="1695809812184" duration="830000" />
+      <workItem from="1695816752534" duration="11869000" />
+      <workItem from="1695847955430" duration="324000" />
+      <workItem from="1695937792586" duration="5010000" />
+      <workItem from="1696000067768" duration="617000" />
+      <workItem from="1696074598329" duration="990000" />
+      <workItem from="1696087243846" duration="25000" />
+      <workItem from="1696696900950" duration="1628000" />
+      <workItem from="1696709258455" duration="2336000" />
+      <workItem from="1696761951553" duration="762000" />
+      <workItem from="1696764843899" duration="610000" />
+      <workItem from="1696770185549" duration="176000" />
+      <workItem from="1696783876118" duration="12000" />
+      <workItem from="1696803789493" duration="400000" />
+    </task>
+    <task id="LOCAL-00001" summary="GLCC Project">
+      <created>1695240505028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695240505028</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="GLCC Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="GLCC Project" />
+  </component>
+</project>

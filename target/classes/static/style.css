@@ -1,0 +1,75 @@
+body {
+    margin-top: 20px;
+    background: #eee;
+}
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.avatar.sm {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: .818125rem;
+}
+
+.table-nowrap .table td,
+.table-nowrap .table th {
+    white-space: nowrap;
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.75rem 1.25rem;
+    border-bottom-width: 1px;
+}
+
+table th {
+    font-weight: 600;
+    background-color: #eeecfd !important;
+}
+
+/* #barChart {
+
+    height: 65vh !important;
+    width: 100% !important;
+} */
+
+.chartContainer {
+    background: whitesmoke;
+    padding: 0px;
+    border-radius: 12px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bebebe;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* .chartContainer2 {
+    width: 65%;
+    background: whitesmoke;
+    padding: 0px;
+    border-radius: 12px;
+} */
