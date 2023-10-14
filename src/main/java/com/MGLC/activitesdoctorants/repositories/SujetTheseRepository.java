@@ -23,13 +23,28 @@ public interface SujetTheseRepository extends JpaRepository<SujetThese, Integer>
         Root<SujetThese> root = query.from(SujetThese.class);
         List<Predicate> predicates = new ArrayList<>();
         if (c2 != null){
-            Predicate predicate = criteriaBuilder.or(
-                    criteriaBuilder.like(root.get("motCles"), "%" + c1 + "%" + c2 + "%"),
-                    criteriaBuilder.like(root.get("motCles"), "%" + c2 + "%" + c1 + "%")
+            Predicate motPredicate = criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("motCles")),
+                            "%" + c1.toLowerCase() + "%" + c2.toLowerCase() + "%"),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("motCles")),
+                            "%" + c2.toLowerCase() + "%" + c1.toLowerCase() + "%")
             );
+            Predicate titrePredicate = criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("titre")),
+                            "%" + c1.toLowerCase() + "%" + c2.toLowerCase() + "%"),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("titre")),
+                            "%" + c2.toLowerCase() + "%" + c1.toLowerCase() + "%")
+            );
+
+            Predicate predicate = criteriaBuilder.or(motPredicate, titrePredicate);
             predicates.add(predicate);
         }else {
-            Predicate predicate = criteriaBuilder.like(root.get("motCles"), "%" + c1 + "%" );
+            Predicate predicate = criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("motCles")),
+                            "%" + c1.toLowerCase() + "%" ),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("titre")),
+                            "%" + c1.toLowerCase() + "%" )
+            );
             predicates.add(predicate);
         }
         query.where(criteriaBuilder.and(predicates.toArray(new Predicate[0])));
@@ -44,12 +59,34 @@ public interface SujetTheseRepository extends JpaRepository<SujetThese, Integer>
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Object> query = criteriaBuilder.createQuery(Object.class);
         Root<SujetThese> root = query.from(SujetThese.class);
-        Predicate predicate = criteriaBuilder.or(
-                criteriaBuilder.like(root.get("motCles"), "%" + c1 + "%" + c2 + "%"),
-                criteriaBuilder.like(root.get("motCles"), "%" + c2 + "%" + c1 + "%")
-        );
+        List<Predicate> predicates = new ArrayList<>();
+        if (c2 != null){
+            Predicate motPredicate = criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("motCles")),
+                            "%" + c1.toLowerCase() + "%" + c2.toLowerCase() + "%"),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("motCles")),
+                            "%" + c2.toLowerCase() + "%" + c1.toLowerCase() + "%")
+            );
+            Predicate titrePredicate = criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("titre")),
+                            "%" + c1.toLowerCase() + "%" + c2.toLowerCase() + "%"),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("titre")),
+                            "%" + c2.toLowerCase() + "%" + c1.toLowerCase() + "%")
+            );
+
+            Predicate predicate = criteriaBuilder.or(motPredicate, titrePredicate);
+            predicates.add(predicate);
+        }else {
+            Predicate predicate = criteriaBuilder.or(
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("motCles")),
+                            "%" + c1.toLowerCase() + "%" ),
+                    criteriaBuilder.like(criteriaBuilder.lower(root.get("titre")),
+                            "%" + c1.toLowerCase() + "%" )
+            );
+            predicates.add(predicate);
+        }
         query.select(criteriaBuilder.count(root))
-             .where(predicate);
+             .where(predicates.toArray(new Predicate[0]));
         return entityManager.createQuery(query).getSingleResult();
     }
 }

@@ -2,18 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-
-
     <title>General Search Results - Bootdey.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
     	body{
-        background: url(wallpaper.png) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
         margin-top:20px;
       }
 
@@ -331,7 +324,7 @@
                   <div class="result-body">
                     <div class="table-responsive">
                       <table class="table widget-26">
-                        <tbody>
+                        <tbody th:if="${profSize}>0">
                           <tr th:each="prof : ${professeurs}">
                             <td>
                               <div class="widget-26-job-emp-img">
@@ -358,13 +351,16 @@
                               <div class="widget-26-job-salary" th:text="${prof.getEtablissement()}"></div>
                             </td>
                         </tbody>
+                        <tbody th:if="${profSize}==0">
+                          <h4>Aucun résultat trouvé..</h4>
+                        </tbody>
                       </table>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            <nav class="d-flex justify-content-center">
+            <nav class="d-flex justify-content-center" th:if="${profSize}>0">
                 <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
                   <li class="page-item">
                     <form th:action="@{/all}" method="post">
@@ -418,7 +414,16 @@
                     <div class="result-body">
                       <div class="table-responsive">
                         <table class="table widget-26">
-                          <tbody>
+                          <thead th:if="${doctSize}>0">
+                            <tr>
+                              <th></th>
+                              <th>Nom et Prenom</th>
+                              <th>CNE</th>
+                              <th>Apegee</th>
+                              <th>Email</th>
+                            </tr>
+                          </thead>
+                          <tbody th:if="${doctSize}>0">
                             <tr th:each="doc : ${doctorants}">
                               <td>
                                 <div class="widget-26-job-emp-img">
@@ -428,9 +433,6 @@
                               <td>
                                 <div class="widget-26-job-title">
                                   <a href="#" th:text="${doc.getNom()} + ' ' + ${doc.getPrenom()}"></a>
-                                  <p class="m-0">
-                                    <a href="#" class="employer-name" th:text="${doc.getCne()}"></a>
-                                    <span class="text-muted time"></span></p>
                                 </div>
                               </td>
                               <td>
@@ -450,13 +452,16 @@
                               </td>
                             </tr>
                           </tbody>
+                          <tbody th:if="${doctSize}==0">
+                          <h4>Aucun résultat trouvé..</h4>
+                          </tbody>
                         </table>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              <nav class="d-flex justify-content-center">
+              <nav class="d-flex justify-content-center" th:if="${doctSize}>0">
                   <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
                     <li class="page-item">
                       <form th:action="@{/all}" method="post">
@@ -510,7 +515,7 @@
                       <div class="result-body">
                         <div class="table-responsive">
                           <table class="table widget-26">
-                            <tbody>
+                            <tbody th:if="${sujSize}>0">
                               <tr>
                                 <th>Titre</th>
                                 <th>Doctorant</th>
@@ -536,13 +541,16 @@
                                 </td>
                               </tr>
                             </tbody>
+                            <tbody th:if="${sujSize}==0">
+                            <h4>Aucun résultat trouvé..</h4>
+                            </tbody>
                           </table>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                <nav class="d-flex justify-content-center">
+                <nav class="d-flex justify-content-center" th:if="${sujSize}>0">
                     <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
                       <li class="page-item">
                         <form th:action="@{/all}" method="post">

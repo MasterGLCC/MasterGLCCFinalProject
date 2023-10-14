@@ -5,60 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_7_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_15_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_15_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/Recherche.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/RechercheResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/AxeRechercheRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/DoctorantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/DossierDoctorantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/PersonneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/ProfesseurRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SoutenanceTheseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/recherche/RechercheService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/recherche/RechercheServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/all_results.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/landing_Results.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wallpaper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MasterGLCCFinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MasterGLCCFinalProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Absence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Auteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/AxeRecherche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/AxeRecherche.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Commentaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Commentaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Diplome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Diplome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Doctorant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/DossierDoctorant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/DossierDoctorant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/EtatAvancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/EtatAvancement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Forum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Forum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/MembreJury.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/MembreJury.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Personne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Reference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Reunion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Reunion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/SoutenanceThese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SoutenanceThese.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/SujetThese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/SuperAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SuperAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TestEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/TestEntities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/PublicationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/PublicationType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/ReferenceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/ReferenceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/AxeRechercheRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/TestRepositories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/TestRepositories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/TestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/all_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/all_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/landing_Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/landing_Results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recherche_barre.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recherche_barre.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/TestController.class" beforeDir="false" />
@@ -241,7 +193,7 @@
       <workItem from="1695238158439" duration="2978000" />
       <workItem from="1695529954417" duration="66326000" />
       <workItem from="1696809982811" duration="768000" />
-      <workItem from="1696861445519" duration="54874000" />
+      <workItem from="1696861445519" duration="58762000" />
     </task>
     <task id="LOCAL-00001" summary="GLCC Project">
       <created>1695240505028</created>

@@ -7,12 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         body{
-            background: url(wallpaper.png) no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            margin-top:20px;
+
         }
 
         .widget-26 {
@@ -332,6 +327,14 @@
                   <div class="result-body">
                     <div class="table-responsive">
                       <table class="table widget-26">
+                        <thead>
+                          <tr th:if="${type}=='d'">
+                            <th style="text-align: center">Nom et Prenom</th>
+                            <th>CNE</th>
+                            <th>Apegee</th>
+                            <th>Email</th>
+                          </tr>
+                        </thead>
                         <tbody>
                           <tr th:if="${type}=='p'" th:each="prof : ${professeurs}">
                             <td>
@@ -342,8 +345,7 @@
                             <td>
                               <div class="widget-26-job-title">
                                 <a href="#" th:text="${prof.getNom()} + ' ' + ${prof.getPrenom()}"></a>
-                                <p class="m-0" >
-                                  <a href="#" class="employer-name" th:text="${prof.getEtablissement()}"></a>
+                                <p class="m-0">
                                   <span class="text-muted time" th:text="${prof.getGrade()}"></span>
                                 </p>
                               </div>
@@ -360,36 +362,39 @@
                               <div class="widget-26-job-salary" th:text="${prof.getEtablissement()}"></div>
                             </td>
                           </tr>
-                          <tr th:if="${type}=='d'" th:each="doc : ${doctorants}">
-                            <td>
-                              <div class="widget-26-job-emp-img">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
-                              </div>
-                            </td>
-                            <td>
-                              <div class="widget-26-job-title">
-                                <a href="#" th:text="${doc.getNom()} + ' ' + ${doc.getPrenom()}"></a>
-                                <p class="m-0">
-                                  <a href="#" class="employer-name" th:text="${doc.getCne()}"></a>
-                                  <span class="text-muted time"></span></p>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="widget-26-job-info">
-                                <p class="type m-0" th:text="${doc.getCne()}"></p>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="widget-26-job-salary">
-                                <p th:text="${doc.getApogee()}"></p>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="widget-26-job-salary">
-                                <p th:text="${doc.getEmail()}"></p>
-                              </div>
-                            </td>
-                          </tr>
+                          <table class="table widget-26">
+                            <div th:if="${type}=='d'">
+                              <tbody>
+                              <tr  th:each="doc : ${doctorants}">
+                                <td>
+                                  <div class="widget-26-job-emp-img">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="widget-26-job-title">
+                                    <a href="#" th:text="${doc.getNom()} + ' ' + ${doc.getPrenom()}"></a>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="widget-26-job-info">
+                                    <p class="type m-0" th:text="${doc.getCne()}"></p>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="widget-26-job-salary">
+                                    <p th:text="${doc.getApogee()}"></p>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="widget-26-job-salary">
+                                    <p th:text="${doc.getEmail()}"></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </div>
+
                           <div th:if="${type}=='t'">
                             <tr>
                               <th>Titre</th>
