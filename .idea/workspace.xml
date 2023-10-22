@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/repositories/SujetTheseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/all_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/all_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/landing_Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/landing_Results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recherche_barre.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recherche_barre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Absence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Auteur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/AxeRecherche.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Commentaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Departement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Diplome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Doctorant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/DossierDoctorant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/EtatAvancement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Forum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/MembreJury.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Personne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Professeur.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Publication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Reference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Reunion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/SoutenanceThese.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/SujetThese.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/SuperAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/TestEntities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Grade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/PublicationType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/ReferenceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/TestRepositories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/TestService.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="devlop" />
+                    <option name="lastUsedInstant" value="1695238220" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Dev" />
+                    <option name="lastUsedInstant" value="1695238193" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1695238192" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2VfrpLcbEP97AWJrUXAM2IT8rpY" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/Stage/tts_corest_jvm",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "afafbef97cc4bc823f80735ef99d34e9",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="dto" />
+      <recent name="entities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\Java\IdeaProjects\MasterGLCCFinalProject\src\main\resources\templates" />
+      <recent name="C:\Users\Lenovo\Desktop\Java\IdeaProjects\MasterGLCCFinalProject\src\main\resources\images" />
+      <recent name="C:\Users\Lenovo\Desktop\Java\IdeaProjects\MasterGLCCFinalProject\src\main\resources\WEB-INF\views" />
+      <recent name="C:\Users\Lenovo\Desktop\Java\IdeaProjects\MasterGLCCFinalProject\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\Java\IdeaProjects\MasterGLCCFinalProject\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn clean install mvn clean install " />
+      <command value="mvn clean install -DskipTests" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ActivitesdoctorantsApplication (1)">
+    <configuration name="ActivitesdoctorantsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MasterGLCCFinalProject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.MGLC.activitesdoctorants.ActivitesdoctorantsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivitesdoctorantsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="activitesdoctorants" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.MGLC.activitesdoctorants.ActivitesdoctorantsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="" />
+      <created>1695238157388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695238157388</updated>
+      <workItem from="1695238158439" duration="2978000" />
+      <workItem from="1695529954417" duration="66326000" />
+      <workItem from="1696809982811" duration="768000" />
+      <workItem from="1696861445519" duration="58762000" />
+    </task>
+    <task id="LOCAL-00001" summary="GLCC Project">
+      <created>1695240505028</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695240505028</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="GLCC Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="GLCC Project" />
+  </component>
+</project>
