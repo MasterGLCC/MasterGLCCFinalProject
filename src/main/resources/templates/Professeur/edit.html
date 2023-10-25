@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+		<link href="../static/style.css" rel="stylesheet"/>
+ 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Material Icons CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<title>Details</title>
+</head>
+
+	<style>
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+		*{
+			background: linear-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+		}
+		.td{
+			margin-left: 78px;
+			text-align: center;
+		}
+		th{
+			text-align: center;
+		}
+		.table{
+			margin-top: 20px;
+		}
+		.sujet{
+			background-color: #e8f4f8;
+			padding-top: 5px !important;
+			padding-bottom: 5px !important;
+			margin-top:7px;
+			/*width: 30%;
+			border: none;
+			margin-right: 0%;*/
+		}
+		/*.etat{
+			width: 50%;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			margin-right: 37px;
+			
+		}*/
+		.etat{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.etat .btn{
+			padding: 10px 20px;
+			font-size: 15px;
+			font-weight: 600;
+			color: #222;
+			background: #f5f5f5;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.tit{
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.flex-child-elemen{
+			
+			width: 100%;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			margin-left: 0%;
+			display: inline-block;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
+		.flex-parent-element{
+			display: flex;
+			padding: 20px;
+		}
+		
+		.popup{
+			/*position: absolute;*/
+			top: 80%;
+			left: 50%;
+			opacity: 0;
+			transform: translate(-50%,-50%) scale(1.25);
+			width: 555px;
+			padding: 20px 30px;
+			background: #fff;
+			box-shadow: 2px 2px 5px rgba(0, 0,0, 0.15);
+			border-radius: 10px;
+			transition: top 0ms ease-in-out 200ms,
+						opacity 200ms ease-in-out 0ms,
+						transform 200ms ease-in-out 0ms;
+		}
+		.popup.active{
+			top: 80%;
+			opacity: 1;
+			transform: translate(-50%,-50%) scale(1);
+			transition: top 0ms ease-in-out 0ms,
+						opacity 200ms ease-in-out 0ms,
+						transform 200ms ease-in-out 0ms;
+		}
+		
+		.popup .close-btn{
+			position: absolute;
+			top: 10px;
+			padding-top: -20px;
+			right: 10px;
+			width: 15px;
+			height: 15px;
+			background:blue;
+			color:black;
+			text-align: center;
+			line-height: 15px;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+		.etat h2{
+			color: #222;
+			margin: 10px 0px 20px;
+			font-size: 25px;
+		}
+		.etat hr{
+			margin-top: -10px;
+		}
+		.etat .element{
+			margin-top:5px;
+			display: block;
+			width: 488px;
+			padding: 10px;
+			outline: none;
+			text-align: center;
+			border: 1px solid #aaa;
+			border-radius: 5px;
+		}
+		
+		.etat .element label{
+			font-size: 14px;
+			color: #222;
+		}
+		
+		.etat .btn{
+			width: 100%;
+			height: 40px;
+			border: none;
+			outline: none;
+			font-size: 15px;
+			color: #f5f5f5;
+			background: #0096FF;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.etat a{
+			margin-top: 10px;
+			display: block;
+			text-align: center;
+			width: 100%;
+			height: 40px;
+			border: 1px #0096FF;
+			font-size: 15px;
+			color: #0096FF;
+			border-radius: 10px;
+			background: #f5f5f5;
+			text-decoration: none;
+			font-weight: 600;
+		}
+		#detail{
+			cursor: pointer;
+		}
+		
+		.detail {
+            border-color:blue;
+            color:black;
+            background-color: lightblue;
+        }
+
+        .detail:hover {
+            background-color:blue;
+            color: white;
+        }
+		ul{
+		list-style-type: none;
+		border: 1;
+		border-radius: 15px;
+		}
+		.head {
+            background-color:blue;
+            color: white;
+            padding: 12px;
+            text-align:left;
+        }
+        .bmenu {
+    
+    color: white; /* Change the text color to white */
+   
+}
+.bmenu{
+		background-color: lightblue !important;
+		
+	}
+
+
+#operations {
+    display: none; /* Initially hide the dropdown menu */
+}
+
+#operations li {
+    margin: 5px 0; /* Add spacing between list items */
+}
+
+
+
+       /* .footer {
+        background-color: rgba(169, 169, 169, 0.5); /* Couleur grise transparente 
+        padding: 10px; /* Espace intérieur du bas de page 
+        text-align:right; /* Alignement du texte au centre 
+        position: fixed; /* Fixer le bas de page en bas de l'écran 
+        bottom: 0; /* Positionner le bas de page en bas de l'écran 
+        width: 100%; /* Largeur du bas de page 
+    }
+    .footer p {
+        font-size: 14px; /* Taille de police pour le paragraphe dans le bas de page 
+        margin: 0; /* Supprimer les marges par défaut du paragraphe 
+    }*/
+    .menu-container {
+            /*background-color: black; /* Définir la couleur de fond du menu en noir */
+            padding-top: 5px; /* Ajouter un espacement en haut pour éviter que le texte ne soit collé en haut */
+            padding-bottom: 5px;
+        }
+        
+        .updateButton {
+			padding-top:9px !important;
+            border-color:blue !important;
+            color:white !important;
+            background-color:blue !important;
+    }
+
+    .updateButton:hover {
+        background-color: lightblue !important;
+        color:black !important;
+    }
+    .TelFile{
+		padding-top: 9px;
+		border-color:blue !important;
+        color:rgb(0, 0, 0) !important;
+        background-color: lightblue !important;
+	}
+	.TelFile:hover {
+        background-color:blue!important;
+        color: white !important;
+    }
+	
+	/*.bmenu.hover{
+		background-color:blue !important;
+		color: white !important;
+	}#*/
+	.cmt{
+		margin-top: 2px;
+		margin-left: 20px !important;
+		margin-bottom:2px;
+		color:lightblue;
+		width: 100px !important;
+		background-color:gray;
+		padding-left: 7px;
+		padding-top: 2px;
+		size:25px !important;
+		
+	}
+	.Ecmt{
+		width: 290px; 
+		margin-top: 10px; 
+		margin-left: 20%;
+		background-color: lightblue !important;
+		border-color:lightblue !important;
+        color:rgb(0, 0, 0) !important;
+        size:50px !important;
+	}
+	.Ecmt:hover {
+        background-color:blue!important;
+        color: white !important;
+    }
+    .Ecmt.close-btn{
+			position: absolute;
+			top: 10px;
+			padding-top: -20px;
+			right: 10px;
+			width: 15px;
+			height: 15px;
+			background:blue;
+			color:black;
+			text-align: center;
+			line-height: 15px;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+	</style>
+
+<body onload="showPop()">
+   <div class="head"><h4 style="margin-left: 55px;">Espace professeur</h4></div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menu gauche avec une largeur de 25% -->
+            <div class="col-md-3 bg-dark text-light menu-container">
+               
+                <div class="list-group ">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">home</i> Accueil</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">school</i> Doctorants</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">subject</i> Sujets</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">library_books</i> Publications</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">person</i> Auteurs</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">person</i> Professeurs</a>
+                    <a href="#" class="list-group-item list-group-item-action active bg-dark text-light"><i class="material-icons" style="color: blue;">trending_up</i> Etats d'avancement</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">style</i> Thèmes</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">event</i> Evenements</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><i class="material-icons" style="color: blue;">assignment</i> Candidatures</a>
+                </div>
+            
+            </div>
+            <!-- Contenu principal avec une largeur de 75% -->
+            <div class="col-md-9">
+                <!-- Informations -->
+                <div class="flex-parent-element container card jumbotron sujet">
+                    <div class="flex-parent-element">
+		<div class="flex-child-elemen container card jumbotron sujet" th:each="sujet : ${sujet}">
+		<h2 class="titre"><i>Informations</i></h2>
+		<hr>
+			<table>
+
+
+    				<tr><td class="tit">Sujet de la these:</td><td></td><td></td><td th:text="${sujet[2]}"></td></tr>
+				<tr><td class="tit">Description:</td><td></td><td></td><td th:text="${sujet[3]}"></td></tr>
+				<tr><td class="tit">Mots cles:</td><td></td><td></td><td th:text="${sujet[4]}"></td></tr>
+				<tr><td class="tit">CIN  Doctorant:</td><td></td><td></td><td th:text="${sujet[0]}"></td></tr>
+			</table>
+		
+		</div>
+		</div>
+	
+
+		
+			<div class="popup container card jumbotron etat" th:each="et : ${ett}" th:object="${ett}">
+			<div class="close-btn">&times;</div>
+			<h2><i>Details d'etat d'avancement</i></h2>
+			<hr>
+			<form th:action="@{/etats/edit/{id}/note(id=${ett.idEtat})}" method="post" id="myForm" enctype="multipart/form-data">
+				<input type="hidden" th:name="id" th:value="${ett.idEtat}" />
+				
+					<label>Titre:<input type="text" th:field="*{titre}" class="form-control element"  readonly/></label><br/>
+				
+					<label>Date:<input type="date" th:field="*{date}" class="form-control element"  readonly/></label><br/>
+
+					<label>Description:<textarea th:field="*{Description}" class="form-control element"  readonly></textarea>
+						</label><br/>
+					
+					<label>Note:<select name="note" th:field="*{note}" class="form-control element" >
+						
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+					</select>
+					</label><br/>
+				
+					<input type="submit" value="Modifier" class="btn btn-success updateButton element" />
+<a  th:href="@{'/downloadFile/' + ${ett.idEtat}}" class="TelFile">Télécharger le fichier</a>
+
+				
+			</form>
+		</div>
+		
+	
+                </div>
+
+                <!-- Liste des états -->
+                <div class="gestion container">
+                   <div class="gestion container">
+			<h1><i>Liste des etats</i></h1>
+			   <button type="button" onclick="toggleOptions()" class="btn btn-primary bmenu">
+				   <i class="material-icons " style="color:#222;">menu</i>
+                  
+                </button>
+                <ul class="list-group" style="display: none;" id="operations" th:each="et : ${ett}" th:object="${ett}">
+                    <li class="">
+                        <a type="button" th:if="${ett.idEtat != null and !#strings.isEmpty(ett.idEtat)}"
+                            th:href="@{/etats/edit/{id}(id=${ett.idEtat})}" class="btn btn-light cmt"
+                            data-bs-toggle="modal" data-bs-target="#addcmnt">
+                            <i class="bi bi-eye"></i> Commenter
+                        </a>
+                    </li>
+                    <li class="">
+                        <a th:href="@{/etats/edit/graph/{idTh}(idTh=${id})}" class="btn btn-light cmt"
+                            data-bs-toggle="modal" data-bs-target="#graph">
+                            Evolution
+                        </a>
+                    </li>
+                </ul>
+			<table border="1" class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Titre</th>
+						<th>Date</th>
+						<th>Status</th>
+						<th>Note</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="arr: ${etats}">
+						<td th:text="${arr[0].titre}" class="td"></td>
+						<td th:text="${arr[0].date}" class="td"></td>
+						<td th:if="${arr[0].note>0}" class="td">Valide</td>
+						<td th:unless="${arr[0].note>0}" class="td">En cours</td>
+						<td th:text="${arr[0].note}" class="td"></td>
+						<td class="td"><a type="button" class="btn detail" id="detail" th:href="@{/etats/edit/{id}(id=${arr[0].idEtat})}">Details</a></td>
+				
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<!-- COMMENTAIRE -->
+			<div class="modal fade" id="addcmnt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" th:each="et : ${ett}" th:object="${ett}">
+					<form th:action="@{/etats/edit/{id}/addCmt(id=${ett.idEtat})}" th:method="post"  >
+						     <input type="hidden"  id="idCmnt" name="idCmnt" />
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="editModaLLabeL"> Ajouter un commentaire  </h5>
+									<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<!--<div class="modal-body">
+									<div class="modal-group">
+										<label for="recipient-name" class="col-form-label">id etat</label>
+										<input type="number" class="form-control" name="idEtat" th:field="*{idEtat}" />		
+									</div>
+									
+								</div>-->
+								<input type="hidden" class="form-control" name="idEtat" th:field="*{idEtat}" th:value="${ett.idEtat}"/>	<br/>
+								<div class="modal-body">
+									<div class="modal-group">
+										<label for="recipient-name" class="col-form-label">Commentaire</label>
+								<textarea name="commentaire" id="commentaire" class="form-control" placeholder="Votre commentaire.."></textarea>	
+										<input type="submit" class="btn btn-primary Ecmt" value="Envoyer le message"/>	
+									</div>
+									
+								</div>
+								
+								
+							</div>
+						</div>
+					</form>
+				</div>
+			
+		</div>
+			
+		<!-- GRAPHE -->
+		
+				<div class="modal fade" id="graph" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+					<form th:action="@{/etats/update}" method="post" >
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="editModaLLabeL"> Evolution des notes </h5>
+									<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="modal-group">
+			
+									<canvas id="myChart" width="300" height="250" ></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+	function toggleOptions() {
+        // Obtenez l'élément de la liste déroulante
+        var selectElement = document.getElementById("operations");
+
+        // Rendre la liste déroulante visible ou invisible en fonction de son état actuel
+        selectElement.style.display = (selectElement.style.display === 'none') ? 'block' : 'none';
+    }
+    function afficherMenu() {
+        // Utilisez la fonction prompt pour obtenir le choix de l'utilisateur
+        
+        var choix = document.getElementById("operations").value;
+
+        // Vérifiez le choix de l'utilisateur et effectuez l'opération appropriée
+        switch (choix) {
+            case 'Commentaire':
+                showPop();
+                // Ajoutez ici votre logique pour l'addition
+                break;
+            case 'Evolution':
+                showPop();
+                // Ajoutez ici votre logique pour la soustraction
+                break;
+           
+            default:
+                alert("Choix invalide.");
+        }
+    }
+</script>
+		<script th:inline="javascript">
+			function showPop(){	
+				document.querySelector(".popup").classList.add("active");
+			}
+			
+			
+		document.querySelector(".popup .close-btn").addEventListener("click", function(){
+				document.querySelector(".popup").classList.remove("active");
+			});
+			
+			
+			var etatsAvancement = /*[[${etatsAvancement}]]*/ '';
+    		var labels = etatsAvancement.map(function(etat) { return etat.date; }); 
+    		var notes = etatsAvancement.map(function(etat) { return etat.note; });
+    
+    		var ctx = document.getElementById('myChart').getContext('2d');
+    
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Notes',
+                data: notes,
+               backgroundColor: [
+                            '#eeecfd'
+                        ],
+                        borderColor: [
+                            '#673AB7'
+                        ],
+                        borderWidth: 1,
+
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 10  // Ajustez cette valeur pour définir la valeur maximale de l'axe y
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Évolution des Notes'
+                },
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+		</script>
+<!--<footer> <p>département de doctorat</p></footer>-->
+</body>
+
+</html>
