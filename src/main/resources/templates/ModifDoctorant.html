@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">  <title>Doctorant Management</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Système de Gestion des Doctorants</a>
+
+
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a th:href="@{/DoctorantManagement}" class="btn btn-secondary"data-bs-toggle="modal" data-bs-target="#addDoctorantModal">
+          <i class="fa-solid fa-circle-plus"></i>Liste des doctorants
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br>
+<br>
+<div class = "container">
+  <div class = "row">
+    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+      <h1 class = "text-center"> Modif_Doctorant  </h1>
+      <div class = "card-body">
+        <form th:action="@{/doctorants/{id}(id=${doctorant.identifiant})}" th:object = "${doctorant}" method="POST">
+
+          <div class="form-group" >
+            <label>Photo</label>
+            <input type="file" name="photo" class="form-control" />
+          </div>
+
+
+          <div class ="form-group">
+            <label> Nom </label>
+            <input
+                    type = "text"
+                    name = "nom"
+                    th:field = "*{nom}"
+                    class = "form-control"
+                    placeholder="Entrer le nom"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Prenom </label>
+            <input
+                    type = "text"
+                    name = "prenom"
+                    th:field = "*{prenom}"
+                    class = "form-control"
+                    placeholder="Entrer le prénom "
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> CIN </label>
+            <input
+                    type = "text"
+                    name = "cin"
+                    th:field = "*{cin}"
+                    class = "form-control"
+                    placeholder="Entrer le cin "
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" name="email" th:field="*{email}" class="form-control" placeholder="Entrer l'email " />
+          </div>
+
+          <div class="form-group">
+            <label>Adresse</label>
+            <input type="text" name="adresse" th:field="*{adresse}" class="form-control" placeholder="Entrer l'adresse " />
+          </div>
+
+          <div class="form-group">
+            <label>Apogee</label>
+            <input type="text" name="apogee" th:field="*{apogee}" class="form-control" placeholder="Entrer l'apogée " />
+          </div>
+
+          <div class="form-group">
+            <label>CNE</label>
+            <input type="text" name="cne" th:field="*{cne}" class="form-control" placeholder="Entrer le CNE " />
+          </div>
+
+
+          <div class="form-group">
+            <label for="encadrant">Encadrant :</label>
+            <select id="encadrant" name="encadrant" class="form-control">
+              <option th:each="encadrant : ${professeurs}" th:value="${encadrant.identifiant}" th:text="${encadrant.nom + ' ' + encadrant.prenom}"></option>
+            </select>
+          </div>
+
+
+
+          <!-- Sélection des co-encadrants (peut y en avoir plusieurs) -->
+          <div class="form-group">
+            <label for="coEncadrants">Co-Encadrants :</label>
+            <select id="coEncadrants" name="coEncadrants" class="form-control" multiple="multiple">
+              <option th:each="coEncadrant : ${professeurs}" th:value="${coEncadrant.identifiant}" th:text="${coEncadrant.nom + ' ' + coEncadrant.prenom}"></option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sujetThese">Sujet de Thèse :</label>
+            <select id="sujetThese" name="sujetThese" class="form-control">
+              <option th:each="sujet : ${sujetsThese}" th:value="${sujet.sujetTheseID}" th:text="${sujet.titre}"></option>
+            </select>
+          </div>
+
+
+
+
+
+          <div class = "box-footer">
+            <button type="submit" class = "btn btn-primary">
+              Modifier Doctorant
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

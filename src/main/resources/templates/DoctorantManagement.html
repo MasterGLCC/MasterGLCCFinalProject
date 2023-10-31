@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .card {
+            box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+        }
+        .avatar.sm {
+            width: 2.25rem;
+            height: 2.25rem;
+            font-size: .818125rem;
+        }
+        .table-nowrap .table td, .table-nowrap .table th {
+            white-space: nowrap;
+        }
+        .table>:not(caption)>*>* {
+            padding: 0.75rem 1.25rem;
+            border-bottom-width: 1px;
+        }
+        table th {
+            font-weight: 600;
+            background-color: #eeecfd !important;
+        }
+        .custom-min-height {
+            min-height: 600px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/0c0a33152b.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctorant Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid mt-3 custom-min-height">
+    <div class="overflow-hidden card table-nowrap table-card border-0">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Liste des doctorants</h2>
+
+            </button>
+            <a th:href="@{/doctorants/new}" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addDoctorantModal">
+                <i class="fa-solid fa-circle-plus"></i> Ajouter Doctorant
+            </a>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="small text-uppercase text-muted py-1">
+                <tr>
+                    <th>Photo</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Cin</th>
+                    <th>Email</th>
+                    <th>Adresse</th>
+                    <th>Apogee</th>
+                    <th>Cne</th>
+
+                    <th>Encadrant</th>
+                    <th>Co-Encadrants</th>
+                    <th>Sujet De Thèse</th>
+                    <th class="text-end">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="doctorant : ${doctorants}" class="align-middle">
+                    <td>
+                        <img th:src="@{'/images/' + ${doctorant.photo}}" alt="Photo du doctorant" width="100" height="100">
+                    </td>
+                    <td th:text="${doctorant.nom}"></td>
+                    <td th:text="${doctorant.prenom}"></td>
+
+
+                    <td th:text="${doctorant.cin}"></td>
+                    <td th:text="${doctorant.email}"></td>
+
+                    <td th:text="${doctorant.adresse}"> <span class="d-inline-block align-middle"></span></td>
+                    <td th:text="${doctorant.apogee}"></td>
+                    <td th:text="${doctorant.cne}"></td>
+
+                    <td>
+                        <span th:text="${doctorant.encadrant != null ? doctorant.encadrant.nom + ' ' + doctorant.encadrant.prenom : ''}"></span>
+                    </td>
+                    <td>
+                        <ul>
+                            <li th:each="coEncadrant : ${doctorant.coEncadrants}" th:text="${coEncadrant.nom + ' ' + coEncadrant.prenom}"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <span th:text="${doctorant.sujetThese != null ? doctorant.sujetThese.titre : ''}"></span>
+                    </td>
+
+                    <td>        <a th:href="@{/doctorants/modif/{id}(id=${doctorant.identifiant})}" class="btn btn-outline-warning rounded-pill btn-floating m-1"
+                                   role="button">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                        <a th:href="@{/doctorants/{id}(id=${doctorant.identifiant})}" class="btn btn-outline-danger rounded-pill btn-floating m-1"
+                           role="button">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
