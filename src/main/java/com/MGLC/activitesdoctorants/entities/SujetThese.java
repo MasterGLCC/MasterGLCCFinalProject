@@ -19,12 +19,7 @@ public class SujetThese {
     @Column(nullable = false)
     private String motsCles;
 
-    @ManyToMany
-    @JoinTable(
-            name = "doctorant_sujet",
-            joinColumns = @JoinColumn(name = "sujet_id"),
-            inverseJoinColumns = @JoinColumn(name = "doctorant_id")
-    )
+    @ManyToMany(mappedBy = "sujetsThese", cascade = CascadeType.ALL)
     private List<Doctorant> doctorantsDirectes;
 
     // Constructors, getters, setters, and any other methods
@@ -37,6 +32,14 @@ public class SujetThese {
 
     // Getter and Setter methods for other fields
     // Implement getter and setter methods for other fields
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitre() {
         return titre;
@@ -67,6 +70,9 @@ public class SujetThese {
     }
 
     public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
-        this.doctorantsDirectes = doctorantsDirectes;
+        this.doctorantsDirectes.clear();
+        if (doctorantsDirectes != null) {
+            this.doctorantsDirectes.addAll(doctorantsDirectes);
+        }
     }
 }

@@ -16,7 +16,6 @@ public class Doctorant {
     @Column(name = "CNE", nullable = false, columnDefinition = "VARCHAR(255) DEFAULT 'DefaultCNEValue'")
     private String CNE;
 
-
     @Column(nullable = false)
     private String nom;
 
@@ -26,6 +25,12 @@ public class Doctorant {
     @ManyToOne
     @JoinColumn(name = "directeur_id")
     private Professeur directeurThese;
+
+    @OneToMany(mappedBy = "doctorant")
+    private List<Meeting> meetings;
+
+    @OneToMany(mappedBy = "doctorant")
+    private List<Absence> absences;
 
     @ManyToMany
     @JoinTable(

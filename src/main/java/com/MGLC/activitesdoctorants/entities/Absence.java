@@ -10,11 +10,11 @@ public class Absence {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "meeting_id")
     private Meeting meeting;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctorant_id")
     private Doctorant doctorant;
 
@@ -30,47 +30,6 @@ public class Absence {
     public Absence() {
         // Default constructor
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Meeting getMeeting() {
-        return meeting;
-    }
-
-    public void setMeeting(Meeting meeting) {
-        this.meeting = meeting;
-    }
-
-    public Doctorant getDoctorant() {
-        return doctorant;
-    }
-
-    public void setDoctorant(Doctorant doctorant) {
-        this.doctorant = doctorant;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public void setReason(String reason) {
-        this.reason = reason;
-    }
-
     public String getRaisonAbsence() {
         return raisonAbsence;
     }
@@ -78,4 +37,7 @@ public class Absence {
     public void setRaisonAbsence(String raisonAbsence) {
         this.raisonAbsence = raisonAbsence;
     }
+    // Getters and setters
+
+    // Additional methods, if needed
 }

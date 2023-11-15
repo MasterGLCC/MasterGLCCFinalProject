@@ -19,13 +19,16 @@ public class Meeting {
     @Column(nullable = false)
     private String location;
 
-    // Add more fields as needed
-    // For example:
     @Column
     private String description;
 
     @Column
     private String compteRendu;
+
+    @ManyToOne
+    @JoinColumn(name = "doctorant_id")
+    private Doctorant doctorant;
+
 
     // Constructors, getters, setters, and any other methods
 
@@ -33,7 +36,6 @@ public class Meeting {
         // Default constructor
     }
 
-    // Add other constructors as needed
     public Meeting(String subject, LocalDateTime dateTime, String location) {
         this.subject = subject;
         this.dateTime = dateTime;
@@ -41,6 +43,7 @@ public class Meeting {
     }
 
     // Getter and Setter methods for other fields
+
     public String getDescription() {
         return description;
     }
@@ -58,6 +61,14 @@ public class Meeting {
     }
 
     // Implement getter and setter methods for other fields
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getSubject() {
         return subject;
@@ -82,6 +93,4 @@ public class Meeting {
     public void setLocation(String location) {
         this.location = location;
     }
-
-    // Implement getter and setter methods for other fields
 }

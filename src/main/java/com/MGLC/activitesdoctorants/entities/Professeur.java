@@ -16,13 +16,13 @@ public class Professeur {
     @Column(nullable = false)
     private String prenom;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "directeurThese")
+    @OneToMany(mappedBy = "directeurThese", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Doctorant> doctorantsDirectes;
 
     // Constructors, getters, setters, and any other methods
@@ -35,6 +35,14 @@ public class Professeur {
 
     // Getter and Setter methods for other fields
     // Implement getter and setter methods for other fields
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNom() {
         return nom;
@@ -73,6 +81,9 @@ public class Professeur {
     }
 
     public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
-        this.doctorantsDirectes = doctorantsDirectes;
+        this.doctorantsDirectes.clear();
+        if (doctorantsDirectes != null) {
+            this.doctorantsDirectes.addAll(doctorantsDirectes);
+        }
     }
 }
