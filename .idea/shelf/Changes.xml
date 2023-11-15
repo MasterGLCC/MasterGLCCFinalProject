@@ -1,0 +1,44 @@
+<changelist name="Changes" date="1700077121303" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" />
+  <option name="DESCRIPTION" value="Changes" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Absence.class" />
+    <option name="AFTER_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Absence.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/Absence.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/activitesdoctorants-0.0.1-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="target/activitesdoctorants-0.0.1-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/activitesdoctorants-0.0.1-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" />
+    <option name="AFTER_PATH" value="target/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" />
+    <option name="AFTER_PATH" value="target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/ActivitesdoctorantsApplication.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class" />
+    <option name="AFTER_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/Doctorant.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class" />
+    <option name="AFTER_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/Meeting.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class" />
+    <option name="AFTER_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/Professeur.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class" />
+    <option name="AFTER_PATH" value="target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/SujetThese.class" />
+  </binary>
+</changelist>

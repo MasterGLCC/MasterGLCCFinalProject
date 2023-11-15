@@ -12,7 +12,6 @@ import services.AbsenceService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/absences")
 public class AbsenceController {
 
     @Autowired
@@ -58,5 +57,10 @@ public class AbsenceController {
     public ResponseEntity<List<Absence>> getAllAbsences() {
         List<Absence> absences = absenceService.getAllAbsences();
         return new ResponseEntity<>(absences, HttpStatus.OK);
+    }
+    @GetMapping("/test")
+    public String greeting() {
+//            @RequestParam(value = "name", defaultValue = "World") String name) {
+        return "Test";
     }
 }

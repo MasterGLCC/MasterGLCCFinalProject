@@ -1,0 +1,451 @@
+Index: src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.MGLC.activitesdoctorants.entities;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.List;\r\n\r\n@Entity\r\npublic class SujetThese {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n    @Column(nullable = false)\r\n    private String titre;\r\n\r\n    @Column(nullable = false)\r\n    private String description;\r\n\r\n    @Column(nullable = false)\r\n    private String motsCles;\r\n\r\n    @ManyToMany(mappedBy = \"sujetsThese\", cascade = CascadeType.ALL)\r\n    private List<Doctorant> doctorantsDirectes;\r\n\r\n    // Constructors, getters, setters, and any other methods\r\n\r\n    public SujetThese() {\r\n        // Default constructor\r\n    }\r\n\r\n    // Add other constructors as needed\r\n\r\n    // Getter and Setter methods for other fields\r\n    // Implement getter and setter methods for other fields\r\n\r\n    public Long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(Long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getTitre() {\r\n        return titre;\r\n    }\r\n\r\n    public void setTitre(String titre) {\r\n        this.titre = titre;\r\n    }\r\n\r\n    public String getDescription() {\r\n        return description;\r\n    }\r\n\r\n    public void setDescription(String description) {\r\n        this.description = description;\r\n    }\r\n\r\n    public String getMotsCles() {\r\n        return motsCles;\r\n    }\r\n\r\n    public void setMotsCles(String motsCles) {\r\n        this.motsCles = motsCles;\r\n    }\r\n\r\n    public List<Doctorant> getDoctorantsDirectes() {\r\n        return doctorantsDirectes;\r\n    }\r\n\r\n    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {\r\n        this.doctorantsDirectes.clear();\r\n        if (doctorantsDirectes != null) {\r\n            this.doctorantsDirectes.addAll(doctorantsDirectes);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java b/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java
+--- a/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java	(date 1700076936653)
+@@ -4,6 +4,7 @@
+ import java.util.List;
+ 
+ @Entity
++@Table(name = "sujetThese")
+ public class SujetThese {
+ 
+     @Id
+@@ -19,8 +20,8 @@
+     @Column(nullable = false)
+     private String motsCles;
+ 
+-    @ManyToMany(mappedBy = "sujetsThese", cascade = CascadeType.ALL)
+-    private List<Doctorant> doctorantsDirectes;
++//    @ManyToMany(mappedBy = "sujetsThese", cascade = CascadeType.ALL)
++//    private List<Doctorant> doctorantsDirectes;
+ 
+     // Constructors, getters, setters, and any other methods
+ 
+@@ -65,14 +66,14 @@
+         this.motsCles = motsCles;
+     }
+ 
+-    public List<Doctorant> getDoctorantsDirectes() {
+-        return doctorantsDirectes;
+-    }
+-
+-    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
+-        this.doctorantsDirectes.clear();
+-        if (doctorantsDirectes != null) {
+-            this.doctorantsDirectes.addAll(doctorantsDirectes);
+-        }
+-    }
++//    public List<Doctorant> getDoctorantsDirectes() {
++//        return doctorantsDirectes;
++//    }
++//
++//    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
++//        this.doctorantsDirectes.clear();
++//        if (doctorantsDirectes != null) {
++//            this.doctorantsDirectes.addAll(doctorantsDirectes);
++//        }
++//    }
+ }
+Index: src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.MGLC.activitesdoctorants.entities;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.List;\r\n\r\n@Entity\r\npublic class Professeur {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n    @Column(nullable = false)\r\n    private String nom;\r\n\r\n    @Column(nullable = false)\r\n    private String prenom;\r\n\r\n    @Column(nullable = false, unique = true)\r\n    private String email;\r\n\r\n    @Column(nullable = false)\r\n    private String phoneNumber;\r\n\r\n    @OneToMany(mappedBy = \"directeurThese\", cascade = CascadeType.ALL, orphanRemoval = true)\r\n    private List<Doctorant> doctorantsDirectes;\r\n\r\n    // Constructors, getters, setters, and any other methods\r\n\r\n    public Professeur() {\r\n        // Default constructor\r\n    }\r\n\r\n    // Add other constructors as needed\r\n\r\n    // Getter and Setter methods for other fields\r\n    // Implement getter and setter methods for other fields\r\n\r\n    public Long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(Long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getNom() {\r\n        return nom;\r\n    }\r\n\r\n    public void setNom(String nom) {\r\n        this.nom = nom;\r\n    }\r\n\r\n    public String getPrenom() {\r\n        return prenom;\r\n    }\r\n\r\n    public void setPrenom(String prenom) {\r\n        this.prenom = prenom;\r\n    }\r\n\r\n    public String getEmail() {\r\n        return email;\r\n    }\r\n\r\n    public void setEmail(String email) {\r\n        this.email = email;\r\n    }\r\n\r\n    public String getPhoneNumber() {\r\n        return phoneNumber;\r\n    }\r\n\r\n    public void setPhoneNumber(String phoneNumber) {\r\n        this.phoneNumber = phoneNumber;\r\n    }\r\n\r\n    public List<Doctorant> getDoctorantsDirectes() {\r\n        return doctorantsDirectes;\r\n    }\r\n\r\n    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {\r\n        this.doctorantsDirectes.clear();\r\n        if (doctorantsDirectes != null) {\r\n            this.doctorantsDirectes.addAll(doctorantsDirectes);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java b/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java
+--- a/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java	(date 1700076936679)
+@@ -4,6 +4,7 @@
+ import java.util.List;
+ 
+ @Entity
++@Table(name = "professeur")
+ public class Professeur {
+ 
+     @Id
+@@ -22,8 +23,8 @@
+     @Column(nullable = false)
+     private String phoneNumber;
+ 
+-    @OneToMany(mappedBy = "directeurThese", cascade = CascadeType.ALL, orphanRemoval = true)
+-    private List<Doctorant> doctorantsDirectes;
++//    @OneToMany(mappedBy = "directeurThese", cascade = CascadeType.ALL, orphanRemoval = true)
++//    private List<Doctorant> doctorantsDirectes;
+ 
+     // Constructors, getters, setters, and any other methods
+ 
+@@ -76,14 +77,14 @@
+         this.phoneNumber = phoneNumber;
+     }
+ 
+-    public List<Doctorant> getDoctorantsDirectes() {
+-        return doctorantsDirectes;
+-    }
+-
+-    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
+-        this.doctorantsDirectes.clear();
+-        if (doctorantsDirectes != null) {
+-            this.doctorantsDirectes.addAll(doctorantsDirectes);
+-        }
+-    }
++//    public List<Doctorant> getDoctorantsDirectes() {
++//        return doctorantsDirectes;
++//    }
++//
++//    public void setDoctorantsDirectes(List<Doctorant> doctorantsDirectes) {
++//        this.doctorantsDirectes.clear();
++//        if (doctorantsDirectes != null) {
++//            this.doctorantsDirectes.addAll(doctorantsDirectes);
++//        }
++//    }
+ }
+Index: src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.MGLC.activitesdoctorants.entities;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.LocalDateTime;\r\n\r\n@Entity\r\npublic class Meeting {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n    @Column(nullable = false)\r\n    private String subject;\r\n\r\n    @Column(nullable = false)\r\n    private LocalDateTime dateTime;\r\n\r\n    @Column(nullable = false)\r\n    private String location;\r\n\r\n    @Column\r\n    private String description;\r\n\r\n    @Column\r\n    private String compteRendu;\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"doctorant_id\")\r\n    private Doctorant doctorant;\r\n\r\n\r\n    // Constructors, getters, setters, and any other methods\r\n\r\n    public Meeting() {\r\n        // Default constructor\r\n    }\r\n\r\n    public Meeting(String subject, LocalDateTime dateTime, String location) {\r\n        this.subject = subject;\r\n        this.dateTime = dateTime;\r\n        this.location = location;\r\n    }\r\n\r\n    // Getter and Setter methods for other fields\r\n\r\n    public String getDescription() {\r\n        return description;\r\n    }\r\n\r\n    public void setDescription(String description) {\r\n        this.description = description;\r\n    }\r\n\r\n    public String getCompteRendu() {\r\n        return compteRendu;\r\n    }\r\n\r\n    public void setCompteRendu(String compteRendu) {\r\n        this.compteRendu = compteRendu;\r\n    }\r\n\r\n    // Implement getter and setter methods for other fields\r\n\r\n    public Long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(Long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getSubject() {\r\n        return subject;\r\n    }\r\n\r\n    public void setSubject(String subject) {\r\n        this.subject = subject;\r\n    }\r\n\r\n    public LocalDateTime getDateTime() {\r\n        return dateTime;\r\n    }\r\n\r\n    public void setDateTime(LocalDateTime dateTime) {\r\n        this.dateTime = dateTime;\r\n    }\r\n\r\n    public String getLocation() {\r\n        return location;\r\n    }\r\n\r\n    public void setLocation(String location) {\r\n        this.location = location;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java b/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java
+--- a/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java	(date 1700076936694)
+@@ -4,6 +4,7 @@
+ import java.time.LocalDateTime;
+ 
+ @Entity
++@Table(name = "meeting")
+ public class Meeting {
+ 
+     @Id
+@@ -25,9 +26,9 @@
+     @Column
+     private String compteRendu;
+ 
+-    @ManyToOne
+-    @JoinColumn(name = "doctorant_id")
+-    private Doctorant doctorant;
++//    @ManyToOne
++//    @JoinColumn(name = "doctorant_id")
++//    private Doctorant doctorant;
+ 
+ 
+     // Constructors, getters, setters, and any other methods
+Index: src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.MGLC.activitesdoctorants.entities;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.List;\r\n\r\n@Entity\r\npublic class Doctorant {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n    @Column(nullable = false)\r\n    private String apogee;\r\n\r\n    @Column(name = \"CNE\", nullable = false, columnDefinition = \"VARCHAR(255) DEFAULT 'DefaultCNEValue'\")\r\n    private String CNE;\r\n\r\n    @Column(nullable = false)\r\n    private String nom;\r\n\r\n    @Column(nullable = false)\r\n    private String prenom;\r\n\r\n    @ManyToOne\r\n    @JoinColumn(name = \"directeur_id\")\r\n    private Professeur directeurThese;\r\n\r\n    @OneToMany(mappedBy = \"doctorant\")\r\n    private List<Meeting> meetings;\r\n\r\n    @OneToMany(mappedBy = \"doctorant\")\r\n    private List<Absence> absences;\r\n\r\n    @ManyToMany\r\n    @JoinTable(\r\n            name = \"doctorant_sujet\",\r\n            joinColumns = @JoinColumn(name = \"doctorant_id\"),\r\n            inverseJoinColumns = @JoinColumn(name = \"sujet_id\")\r\n    )\r\n    private List<SujetThese> sujetsThese;\r\n\r\n    // Constructors, getters, setters, and any other methods\r\n\r\n    public Doctorant() {\r\n        // Default constructor\r\n    }\r\n\r\n    // Add other constructors as needed\r\n\r\n    // Getter and Setter methods for other fields\r\n    // Implement getter and setter methods for other fields\r\n\r\n    public String getApogee() {\r\n        return apogee;\r\n    }\r\n\r\n    public void setApogee(String apogee) {\r\n        this.apogee = apogee;\r\n    }\r\n\r\n    public String getCNE() {\r\n        return CNE;\r\n    }\r\n\r\n    public void setCNE(String CNE) {\r\n        this.CNE = CNE;\r\n    }\r\n\r\n    public Professeur getDirecteurThese() {\r\n        return directeurThese;\r\n    }\r\n\r\n    public void setDirecteurThese(Professeur directeurThese) {\r\n        this.directeurThese = directeurThese;\r\n    }\r\n\r\n    public List<SujetThese> getSujetsThese() {\r\n        return sujetsThese;\r\n    }\r\n\r\n    public void setSujetsThese(List<SujetThese> sujetsThese) {\r\n        this.sujetsThese = sujetsThese;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java b/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java
+--- a/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java	(date 1700076936667)
+@@ -4,6 +4,7 @@
+ import java.util.List;
+ 
+ @Entity
++@Table(name = "doctorant")
+ public class Doctorant {
+ 
+     @Id
+@@ -22,23 +23,23 @@
+     @Column(nullable = false)
+     private String prenom;
+ 
+-    @ManyToOne
+-    @JoinColumn(name = "directeur_id")
+-    private Professeur directeurThese;
+-
+-    @OneToMany(mappedBy = "doctorant")
+-    private List<Meeting> meetings;
++//    @ManyToOne
++//    @JoinColumn(name = "directeur_id")
++//    private Professeur directeurThese;
++//
++//    @OneToMany(mappedBy = "doctorant")
++//    private List<Meeting> meetings;
++//
++//    @OneToMany(mappedBy = "doctorant")
++//    private List<Absence> absences;
+ 
+-    @OneToMany(mappedBy = "doctorant")
+-    private List<Absence> absences;
+-
+-    @ManyToMany
+-    @JoinTable(
+-            name = "doctorant_sujet",
+-            joinColumns = @JoinColumn(name = "doctorant_id"),
+-            inverseJoinColumns = @JoinColumn(name = "sujet_id")
+-    )
+-    private List<SujetThese> sujetsThese;
++//    @ManyToMany
++//    @JoinTable(
++//            name = "doctorant_sujet",
++//            joinColumns = @JoinColumn(name = "doctorant_id"),
++//            inverseJoinColumns = @JoinColumn(name = "sujet_id")
++//    )
++//    private List<SujetThese> sujetsThese;
+ 
+     // Constructors, getters, setters, and any other methods
+ 
+@@ -67,19 +68,19 @@
+         this.CNE = CNE;
+     }
+ 
+-    public Professeur getDirecteurThese() {
+-        return directeurThese;
+-    }
+-
+-    public void setDirecteurThese(Professeur directeurThese) {
+-        this.directeurThese = directeurThese;
+-    }
+-
+-    public List<SujetThese> getSujetsThese() {
+-        return sujetsThese;
+-    }
+-
+-    public void setSujetsThese(List<SujetThese> sujetsThese) {
+-        this.sujetsThese = sujetsThese;
+-    }
++//    public Professeur getDirecteurThese() {
++//        return directeurThese;
++//    }
++//
++//    public void setDirecteurThese(Professeur directeurThese) {
++//        this.directeurThese = directeurThese;
++//    }
++//
++//    public List<SujetThese> getSujetsThese() {
++//        return sujetsThese;
++//    }
++//
++//    public void setSujetsThese(List<SujetThese> sujetsThese) {
++//        this.sujetsThese = sujetsThese;
++//    }
+ }
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Database Configuration\r\nspring.datasource.url=jdbc:mysql://localhost:3306/mglcc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true\r\nspring.datasource.tomcat.jmxEnabled=true\r\nspring.datasource.username=spring\r\nspring.datasource.password=@crypt22kn@22\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.show-sql=true\r\nspring.datasource.tomcat.validationQuery=SELECT 1\r\nspring.datasource.tomcat.validationInterval=30000\r\nspring.datasource.tomcat.timeBetweenEvictionRunsMillis=30000\r\nspring.datasource.tomcat.maxActive=50\r\nspring.datasource.tomcat.maxWait=10000\r\nspring.datasource.tomcat.maxIdle=30\r\nspring.datasource.tomcat.minIdle=10\r\nspring.datasource.tomcat.initialSize=10\r\nspring.datasource.tomcat.removeAbandoned=true\r\nspring.datasource.tomcat.removeAbandonedTimeout=60\r\nspring.datasource.tomcat.logAbandoned=true\r\nspring.datasource.tomcat.driverClassName=com.mysql.cj.jdbc.Driver\r\nspring.datasource.tomcat.url=jdbc:mysql://localhost:3306/mglcc?serverTimezone=UTC?useSSL=true\r\n\r\n# Provide truststore information\r\nspring.datasource.tomcat.truststore=classpath:truststore.jks\r\nspring.datasource.tomcat.truststorePassword=your_truststore_password\r\nspring.datasource.tomcat.truststoreType=JKS\r\n\r\n# Server Configuration\r\nserver.port=8080\r\n\r\n# Hibernate properties\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/target/classes/application.properties	(date 1700076964086)
+@@ -1,10 +1,10 @@
+ # Database Configuration
+-spring.datasource.url=jdbc:mysql://localhost:3306/mglcc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
++spring.datasource.url=jdbc:mysql://localhost:3306/mglc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+ spring.datasource.tomcat.jmxEnabled=true
+-spring.datasource.username=spring
+-spring.datasource.password=@crypt22kn@22
++spring.datasource.username=root
++spring.datasource.password=myroot
+ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+-spring.jpa.hibernate.ddl-auto=update
++spring.jpa.hibernate.ddl-auto=create
+ spring.jpa.show-sql=true
+ spring.datasource.tomcat.validationQuery=SELECT 1
+ spring.datasource.tomcat.validationInterval=30000
+Index: src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.MGLC.activitesdoctorants;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\n\r\n@SpringBootApplication\r\npublic class ActivitesdoctorantsApplication {\r\n\r\n\tpublic static void main(String[] args) {\r\n\t\tSpringApplication.run(ActivitesdoctorantsApplication.class, args);\r\n\t}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java b/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java
+--- a/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java	(date 1700076437447)
+@@ -2,8 +2,10 @@
+ 
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
++import org.springframework.boot.autoconfigure.domain.EntityScan;
+ 
+ @SpringBootApplication
++@EntityScan(basePackages = "com.MGLC.activitesdoctorants.entities")
+ public class ActivitesdoctorantsApplication {
+ 
+ 	public static void main(String[] args) {
+Index: src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.MGLC.activitesdoctorants.entities;\r\n\r\nimport javax.persistence.*;\r\nimport java.time.LocalDate;\r\n\r\n@Entity\r\npublic class Absence {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n    @ManyToOne(fetch = FetchType.LAZY)\r\n    @JoinColumn(name = \"meeting_id\")\r\n    private Meeting meeting;\r\n\r\n    @ManyToOne(fetch = FetchType.LAZY)\r\n    @JoinColumn(name = \"doctorant_id\")\r\n    private Doctorant doctorant;\r\n\r\n    @Column(nullable = false)\r\n    private LocalDate date;\r\n\r\n    @Column(nullable = false)\r\n    private String reason;\r\n\r\n    @Column(nullable = false)\r\n    private String raisonAbsence;\r\n\r\n    public Absence() {\r\n        // Default constructor\r\n    }\r\n    public String getRaisonAbsence() {\r\n        return raisonAbsence;\r\n    }\r\n\r\n    public void setRaisonAbsence(String raisonAbsence) {\r\n        this.raisonAbsence = raisonAbsence;\r\n    }\r\n    // Getters and setters\r\n\r\n    // Additional methods, if needed\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java b/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java
+--- a/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java	(date 1700076794567)
+@@ -4,19 +4,20 @@
+ import java.time.LocalDate;
+ 
+ @Entity
++@Table(name = "absence")
+ public class Absence {
+ 
+     @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     private Long id;
+ 
+-    @ManyToOne(fetch = FetchType.LAZY)
+-    @JoinColumn(name = "meeting_id")
+-    private Meeting meeting;
+-
+-    @ManyToOne(fetch = FetchType.LAZY)
+-    @JoinColumn(name = "doctorant_id")
+-    private Doctorant doctorant;
++//    @ManyToOne(fetch = FetchType.LAZY)
++//    @JoinColumn(name = "meeting_id")
++//    private Meeting meeting;
++//
++//    @ManyToOne(fetch = FetchType.LAZY)
++//    @JoinColumn(name = "doctorant_id")
++//    private Doctorant doctorant;
+ 
+     @Column(nullable = false)
+     private LocalDate date;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7bd1811a-015c-4ae0-a967-67f8279c2cf6\" name=\"Changes\" comment=\"GLCC Project\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Absence.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Absence.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"devlop\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1695238220\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"Dev\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1695238193\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"main\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1695238192\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"ProjectErrors\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2VfrpLcbEP97AWJrUXAM2IT8rpY\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"abbreviatePackageNames\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n    <option name=\"sortByType\" value=\"true\" />\r\n    <option name=\"sortKey\" value=\"BY_TYPE\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\r\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\r\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\r\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;equipe4&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/moussamoussaoui/Desktop/MasterGLCCFinalProject&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,\r\n    &quot;spring.configuration.checksum&quot;: &quot;74abe708c1054244be596bbc59a1b6c7&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunAnythingCache\">\r\n    <option name=\"myCommands\">\r\n      <command value=\"mvn clean install\" />\r\n      <command value=\"mvn clean install mvn clean install \" />\r\n      <command value=\"mvn clean install -DskipTests\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"ActivitesdoctorantsApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"activitesdoctorants\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.MGLC.activitesdoctorants.ActivitesdoctorantsApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7bd1811a-015c-4ae0-a967-67f8279c2cf6\" name=\"Changes\" comment=\"\" />\r\n      <created>1695238157388</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1695238157388</updated>\r\n      <workItem from=\"1695238158439\" duration=\"2978000\" />\r\n      <workItem from=\"1696437174313\" duration=\"5231000\" />\r\n      <workItem from=\"1696462809420\" duration=\"13736000\" />\r\n      <workItem from=\"1696704818389\" duration=\"1027000\" />\r\n      <workItem from=\"1696705874313\" duration=\"1524000\" />\r\n      <workItem from=\"1697274923378\" duration=\"505000\" />\r\n      <workItem from=\"1697276470242\" duration=\"70000\" />\r\n      <workItem from=\"1697381420940\" duration=\"3067000\" />\r\n      <workItem from=\"1699986851781\" duration=\"11582000\" />\r\n      <workItem from=\"1700072152918\" duration=\"791000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"GLCC Project\">\r\n      <created>1695240505028</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1695240505028</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"GLCC Project\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"GLCC Project\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/.idea/workspace.xml	(date 1700076936904)
+@@ -6,16 +6,24 @@
+   <component name="ChangeListManager">
+     <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Absence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Absence.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -40,6 +48,7 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitToolBoxStore">
++    <option name="projectConfigVersion" value="5" />
+     <option name="recentBranches">
+       <RecentBranches>
+         <option name="branchesForRepo">
+@@ -95,7 +104,6 @@
+     <option name="showLibraryContents" value="true" />
+     <option name="showMembers" value="true" />
+     <option name="sortByType" value="true" />
+-    <option name="sortKey" value="BY_TYPE" />
+   </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+Index: target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>C:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\repositories\\ProfesseurRepository.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\services\\DoctorantService.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\dto\\ProfesseurDto.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\services\\AbsenceService.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\dto\\MeetingDto.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\services\\MeetingService.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\entities\\SujetThese.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\services\\SujetTheseService.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\ActivitesdoctorantsApplication.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\repositories\\SujetTheseRepository.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\repositories\\AbsenceRepository.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\repositories\\DoctorantRepository.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\entities\\Meeting.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\services\\ProfesseurService.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\repositories\\MeetingRepository.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\controllers\\AbsenceController.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\dto\\DoctorantDto.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\controllers\\MeetingController.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\entities\\Doctorant.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\controllers\\DoctorantController.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\dto\\AbsenceDto.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\dto\\SujetTheseDto.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\entities\\Absence.java\r\nC:\\Users\\moussamoussaoui\\Desktop\\MasterGLCCFinalProject\\src\\main\\java\\com\\MGLC\\activitesdoctorants\\entities\\Professeur.java\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+--- a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(date 1700076967823)
+@@ -1,24 +1,24 @@
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\ProfesseurRepository.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\DoctorantService.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\ProfesseurDto.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\AbsenceService.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\MeetingDto.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\MeetingService.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\SujetThese.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\SujetTheseService.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\ActivitesdoctorantsApplication.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\SujetTheseRepository.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\AbsenceRepository.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\DoctorantRepository.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Meeting.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\ProfesseurService.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\MeetingRepository.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers\AbsenceController.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\DoctorantDto.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers\MeetingController.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Doctorant.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers\DoctorantController.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\AbsenceDto.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\SujetTheseDto.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Absence.java
+-C:\Users\moussamoussaoui\Desktop\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Professeur.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\MeetingRepository.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\ProfesseurDto.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\MeetingDto.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Meeting.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\MeetingService.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\ActivitesdoctorantsApplication.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\SujetTheseService.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers\DoctorantController.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\AbsenceService.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers\AbsenceController.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Doctorant.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\DoctorantRepository.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\ProfesseurRepository.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\SujetTheseDto.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Absence.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\SujetThese.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\DoctorantService.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\AbsenceDto.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\services\ProfesseurService.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\dto\DoctorantDto.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\entities\Professeur.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\AbsenceRepository.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\controllers\MeetingController.java
++C:\Users\fatim\Desktop\hicham\miniprojet-JEESpringJPA\MasterGLCCFinalProject\src\main\java\com\MGLC\activitesdoctorants\repositories\SujetTheseRepository.java
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Database Configuration\r\nspring.datasource.url=jdbc:mysql://localhost:3306/mglcc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true\r\nspring.datasource.tomcat.jmxEnabled=true\r\nspring.datasource.username=spring\r\nspring.datasource.password=@crypt22kn@22\r\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.show-sql=true\r\nspring.datasource.tomcat.validationQuery=SELECT 1\r\nspring.datasource.tomcat.validationInterval=30000\r\nspring.datasource.tomcat.timeBetweenEvictionRunsMillis=30000\r\nspring.datasource.tomcat.maxActive=50\r\nspring.datasource.tomcat.maxWait=10000\r\nspring.datasource.tomcat.maxIdle=30\r\nspring.datasource.tomcat.minIdle=10\r\nspring.datasource.tomcat.initialSize=10\r\nspring.datasource.tomcat.removeAbandoned=true\r\nspring.datasource.tomcat.removeAbandonedTimeout=60\r\nspring.datasource.tomcat.logAbandoned=true\r\nspring.datasource.tomcat.driverClassName=com.mysql.cj.jdbc.Driver\r\nspring.datasource.tomcat.url=jdbc:mysql://localhost:3306/mglcc?serverTimezone=UTC?useSSL=true\r\n\r\n# Provide truststore information\r\nspring.datasource.tomcat.truststore=classpath:truststore.jks\r\nspring.datasource.tomcat.truststorePassword=your_truststore_password\r\nspring.datasource.tomcat.truststoreType=JKS\r\n\r\n# Server Configuration\r\nserver.port=8080\r\n\r\n# Hibernate properties\r\nspring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision bc2deeba7d7917ec63fbbf1f9a293e387d69636b)
++++ b/src/main/resources/application.properties	(date 1700076022582)
+@@ -1,10 +1,10 @@
+ # Database Configuration
+-spring.datasource.url=jdbc:mysql://localhost:3306/mglcc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
++spring.datasource.url=jdbc:mysql://localhost:3306/mglc?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+ spring.datasource.tomcat.jmxEnabled=true
+-spring.datasource.username=spring
+-spring.datasource.password=@crypt22kn@22
++spring.datasource.username=root
++spring.datasource.password=myroot
+ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+-spring.jpa.hibernate.ddl-auto=update
++spring.jpa.hibernate.ddl-auto=create
+ spring.jpa.show-sql=true
+ spring.datasource.tomcat.validationQuery=SELECT 1
+ spring.datasource.tomcat.validationInterval=30000
