@@ -1,12 +1,15 @@
 package com.MGLC.activitesdoctorants.controllers;
 
+
 import com.MGLC.activitesdoctorants.dto.MeetingDto;
 import com.MGLC.activitesdoctorants.entities.Meeting;
-import com.MGLC.activitesdoctorants.services.MeetingService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.MGLC.activitesdoctorants.services.MeetingService;
 
 import java.util.List;
 
@@ -14,18 +17,22 @@ import java.util.List;
 @RequestMapping("/meetings")
 public class MeetingController {
 
+    private final Logger LOGGER = LoggerFactory.getLogger(MeetingController.class);
+
     @Autowired
     private MeetingService meetingService;
 
     @PostMapping
     public ResponseEntity<Meeting> createMeeting(@RequestBody MeetingDto meetingDto) {
         Meeting createdMeeting = meetingService.createMeeting(meetingDto);
+        LOGGER.info("*************SAVE ***************");
         return new ResponseEntity<>(createdMeeting, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Meeting> getMeetingById(@PathVariable Long id) {
         Meeting meeting = meetingService.getMeetingById(id);
+        LOGGER.info("************* GELT BY ID ***************");
         if (meeting != null) {
             return new ResponseEntity<>(meeting, HttpStatus.OK);
         } else {
@@ -36,6 +43,7 @@ public class MeetingController {
     @PutMapping("/{id}")
     public ResponseEntity<Meeting> updateMeeting(@PathVariable Long id, @RequestBody MeetingDto updatedMeetingDto) {
         Meeting updatedMeeting = meetingService.updateMeeting(id, updatedMeetingDto);
+        LOGGER.info("************* UPDATE BY ID ***************");
         if (updatedMeeting != null) {
             return new ResponseEntity<>(updatedMeeting, HttpStatus.OK);
         } else {
@@ -46,6 +54,7 @@ public class MeetingController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteMeeting(@PathVariable Long id) {
         boolean deleted = meetingService.deleteMeeting(id);
+        LOGGER.info("************* DELETE BY ID ***************");
         if (deleted) {
             return new ResponseEntity<>("Meeting deleted successfully", HttpStatus.OK);
         } else {
@@ -53,8 +62,9 @@ public class MeetingController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<Meeting>> getAllMeetings() {
+        LOGGER.info("************* GET ALL ***************");
         List<Meeting> meetings = meetingService.getAllMeetings();
         return new ResponseEntity<>(meetings, HttpStatus.OK);
     }

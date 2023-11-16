@@ -1,8 +1,5 @@
 package com.MGLC.activitesdoctorants.dto;
 
-import lombok.Getter;
-
-@Getter
 public class SujetTheseDto {
 
     private String titre;
@@ -10,7 +7,12 @@ public class SujetTheseDto {
     private String motsCles;
 
     public SujetTheseDto() {
-        // Default constructor
+    }
+
+    public SujetTheseDto(String titre, String description, String motsCles) {
+        this.titre = titre;
+        this.description = description;
+        this.motsCles = motsCles;
     }
 
     public void setTitre(String titre) {
@@ -23,6 +25,18 @@ public class SujetTheseDto {
 
     public void setMotsCles(String motsCles) {
         this.motsCles = motsCles;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getMotsCles() {
+        return motsCles;
     }
 
     // Implement getters and setters for other properties if needed

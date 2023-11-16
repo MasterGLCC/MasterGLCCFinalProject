@@ -1,10 +1,20 @@
 package com.MGLC.activitesdoctorants.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Doctorant {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,64 +32,41 @@ public class Doctorant {
     @Column(nullable = false)
     private String prenom;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "directeur_id")
+    @JsonIgnore
     private Professeur directeurThese;
 
     @OneToMany(mappedBy = "doctorant")
+    @JsonIgnore
     private List<Meeting> meetings;
 
     @OneToMany(mappedBy = "doctorant")
+    @JsonIgnore
     private List<Absence> absences;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "doctorant_sujet",
             joinColumns = @JoinColumn(name = "doctorant_id"),
             inverseJoinColumns = @JoinColumn(name = "sujet_id")
     )
+    @JsonIgnore
     private List<SujetThese> sujetsThese;
 
-    // Constructors, getters, setters, and any other methods
 
-    public Doctorant() {
-        // Default constructor
-    }
-
-    // Add other constructors as needed
-
-    // Getter and Setter methods for other fields
-    // Implement getter and setter methods for other fields
-
-    public String getApogee() {
-        return apogee;
-    }
-
-    public void setApogee(String apogee) {
-        this.apogee = apogee;
-    }
-
-    public String getCNE() {
-        return CNE;
-    }
-
-    public void setCNE(String CNE) {
-        this.CNE = CNE;
-    }
-
-    public Professeur getDirecteurThese() {
-        return directeurThese;
-    }
-
-    public void setDirecteurThese(Professeur directeurThese) {
-        this.directeurThese = directeurThese;
-    }
-
-    public List<SujetThese> getSujetsThese() {
-        return sujetsThese;
-    }
-
-    public void setSujetsThese(List<SujetThese> sujetsThese) {
-        this.sujetsThese = sujetsThese;
+    @Override
+    public String toString() {
+        return "Doctorant{" +
+                "id=" + id +
+                ", apogee='" + apogee + '\'' +
+                ", CNE='" + CNE + '\'' +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", directeurThese=" + directeurThese +
+                ", meetings=" + meetings +
+                ", absences=" + absences +
+                ", sujetsThese=" + sujetsThese +
+                '}';
     }
 }

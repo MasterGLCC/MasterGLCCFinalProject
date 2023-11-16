@@ -2,10 +2,16 @@ package com.MGLC.activitesdoctorants.services;
 
 import com.MGLC.activitesdoctorants.dto.AbsenceDto;
 import com.MGLC.activitesdoctorants.entities.Absence;
-import com.MGLC.activitesdoctorants.repositories.AbsenceRepository;
+import com.MGLC.activitesdoctorants.repositories.DoctorantRepository;
+import com.MGLC.activitesdoctorants.repositories.MeetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.MGLC.activitesdoctorants.repositories.AbsenceRepository;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,11 +20,22 @@ public class AbsenceService {
 
     @Autowired
     private AbsenceRepository absenceRepository;
-
+    @Autowired
+    private DoctorantRepository doctorantRepository;
+    @Autowired
+    private MeetingRepository meetingRepository;
     public Absence addAbsence(AbsenceDto absenceDto) {
+        Date date = new Date();
+        Instant instant = date.toInstant();
+        LocalDateTime localDateTime = instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
         // Create an Absence entity from the DTO and save it
         Absence absence = new Absence();
         absence.setRaisonAbsence(absenceDto.getRaisonAbsence());
+        absence.setDate(localDateTime);
+        absence.setDoctorant(doctorantRepository.findById(absenceDto.getDoctorantId()).get());
+        absence.setMeeting(meetingRepository.findById(absenceDto.getMeetingId()).get());
+        absence.setReason(absenceDto.getReason());
+
         // Set other properties as needed
         return absenceRepository.save(absence);
     }

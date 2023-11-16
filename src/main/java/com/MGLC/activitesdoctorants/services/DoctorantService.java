@@ -1,10 +1,14 @@
 package com.MGLC.activitesdoctorants.services;
 
+
 import com.MGLC.activitesdoctorants.dto.DoctorantDto;
 import com.MGLC.activitesdoctorants.entities.Doctorant;
-import com.MGLC.activitesdoctorants.repositories.DoctorantRepository;
+import com.MGLC.activitesdoctorants.entities.SujetThese;
+import com.MGLC.activitesdoctorants.repositories.ProfesseurRepository;
+import com.MGLC.activitesdoctorants.repositories.SujetTheseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.MGLC.activitesdoctorants.repositories.DoctorantRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,14 +18,20 @@ public class DoctorantService {
 
     @Autowired
     private DoctorantRepository doctorantRepository;
+    @Autowired
+    private SujetTheseRepository sujetTheseRepository;
+
+    @Autowired
+    private ProfesseurRepository professeurRepository;
 
     public Doctorant addDoctorant(DoctorantDto doctorantDto) {
         // Convert DoctorantDto to Doctorant entity
         Doctorant doctorant = new Doctorant();
         doctorant.setApogee(doctorantDto.getApogee());
         doctorant.setCNE(doctorantDto.getCNE());
-        // Set other properties if needed
-
+        doctorant.setNom(doctorantDto.getNom());
+        doctorant.setPrenom(doctorantDto.getPrenom());
+        doctorant.setDirecteurThese(professeurRepository.findById(doctorantDto.getDirecteurThese()).get());
         return doctorantRepository.save(doctorant);
     }
 

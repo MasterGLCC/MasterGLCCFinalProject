@@ -1,11 +1,10 @@
 package com.MGLC.activitesdoctorants.services;
 
 import com.MGLC.activitesdoctorants.dto.ProfesseurDto;
-import com.MGLC.activitesdoctorants.entities.Doctorant;
 import com.MGLC.activitesdoctorants.entities.Professeur;
-import com.MGLC.activitesdoctorants.repositories.ProfesseurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.MGLC.activitesdoctorants.repositories.ProfesseurRepository;
 
 import java.util.List;
 import java.util.Optional;

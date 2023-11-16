@@ -1,9 +1,17 @@
 package com.MGLC.activitesdoctorants.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Meeting {
 
     @Id
@@ -25,72 +33,24 @@ public class Meeting {
     @Column
     private String compteRendu;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctorant_id")
     private Doctorant doctorant;
 
-
-    // Constructors, getters, setters, and any other methods
-
-    public Meeting() {
-        // Default constructor
+    @Override
+    public String toString() {
+        return "Meeting{" +
+                "id=" + id +
+                ", subject='" + subject + '\'' +
+                ", dateTime=" + dateTime +
+                ", location='" + location + '\'' +
+                ", description='" + description + '\'' +
+                ", compteRendu='" + compteRendu + '\'' +
+                ", doctorant=" + doctorant +
+                '}';
     }
 
-    public Meeting(String subject, LocalDateTime dateTime, String location) {
-        this.subject = subject;
-        this.dateTime = dateTime;
-        this.location = location;
-    }
+// Constructors, getters, setters, and any other methods
 
-    // Getter and Setter methods for other fields
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCompteRendu() {
-        return compteRendu;
-    }
-
-    public void setCompteRendu(String compteRendu) {
-        this.compteRendu = compteRendu;
-    }
-
-    // Implement getter and setter methods for other fields
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public LocalDateTime getDateTime() {
-        return dateTime;
-    }
-
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 }

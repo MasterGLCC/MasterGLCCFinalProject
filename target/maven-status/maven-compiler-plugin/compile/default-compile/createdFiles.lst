@@ -1,4 +1,5 @@
 com\MGLC\activitesdoctorants\repositories\SujetTheseRepository.class
+com\MGLC\activitesdoctorants\enums\Status.class
 com\MGLC\activitesdoctorants\entities\Meeting.class
 com\MGLC\activitesdoctorants\services\SujetTheseService.class
 com\MGLC\activitesdoctorants\entities\Doctorant.class

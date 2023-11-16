@@ -2,9 +2,9 @@ package com.MGLC.activitesdoctorants.services;
 
 import com.MGLC.activitesdoctorants.dto.MeetingDto;
 import com.MGLC.activitesdoctorants.entities.Meeting;
-import com.MGLC.activitesdoctorants.repositories.MeetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.MGLC.activitesdoctorants.repositories.MeetingRepository;
 
 import java.util.List;
 import java.util.Optional;

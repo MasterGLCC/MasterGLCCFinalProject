@@ -1,11 +1,16 @@
 package com.MGLC.activitesdoctorants.dto;
 
+import lombok.Data;
+
+@Data
 public class DoctorantDto {
 
     private String apogee;
     private String CNE;
     private String nom; // Add more properties as needed
     private String prenom;
+    private Long DirecteurThese;
+    private Long idThese;
 
     // Constructors, getters, setters, and any other methods
 
