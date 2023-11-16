@@ -25,7 +25,6 @@ public class ActivitesdoctorantsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ActivitesdoctorantsApplication.class, args);
 	}
-
 	@Bean
 	CommandLineRunner start(AbsenceRepository absenceRepository, DoctorantRepository doctorantRepository, MeetingRepository meetingRepository, ProfesseurRepository professeurRepository, SujetTheseRepository sujetTheseRepository){
 		return args->{

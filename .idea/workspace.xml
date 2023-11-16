@@ -5,50 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bd1811a-015c-4ae0-a967-67f8279c2cf6" name="Changes" comment="GLCC Project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/enums/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/AbsenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/AbsenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/DoctorantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/DoctorantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/controllers/MeetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/AbsenceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/AbsenceDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/DoctorantDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/DoctorantDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/SujetTheseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/dto/SujetTheseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Absence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Doctorant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/Professeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/entities/SujetThese.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/AbsenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/AbsenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/DoctorantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/DoctorantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/MeetingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/ProfesseurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/ProfesseurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/SujetTheseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/MGLC/activitesdoctorants/services/SujetTheseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/activitesdoctorants-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/ActivitesdoctorantsApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/controllers/AbsenceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/controllers/AbsenceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/controllers/DoctorantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/controllers/DoctorantController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/controllers/MeetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/controllers/MeetingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/dto/AbsenceDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/dto/AbsenceDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/dto/DoctorantDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/dto/DoctorantDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/dto/SujetTheseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/dto/SujetTheseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Absence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Absence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Doctorant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Meeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/Professeur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/entities/SujetThese.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/AbsenceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/AbsenceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/DoctorantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/DoctorantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/ProfesseurService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/ProfesseurService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/SujetTheseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MGLC/activitesdoctorants/services/SujetTheseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +66,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -129,33 +88,33 @@
     <option name="showMembers" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;equipe4&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/moussamoussaoui/Desktop/MasterGLCCFinalProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;74abe708c1054244be596bbc59a1b6c7&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "equipe4",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/moussamoussaoui/Desktop/MasterGLCCFinalProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "74abe708c1054244be596bbc59a1b6c7",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
