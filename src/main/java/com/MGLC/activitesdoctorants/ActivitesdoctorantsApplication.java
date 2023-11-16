@@ -28,7 +28,6 @@ public class ActivitesdoctorantsApplication {
 	@Bean
 	CommandLineRunner start(AbsenceRepository absenceRepository, DoctorantRepository doctorantRepository, MeetingRepository meetingRepository, ProfesseurRepository professeurRepository, SujetTheseRepository sujetTheseRepository){
 		return args->{
-
 			professeurRepository.deleteAll();
 			Professeur p = professeurRepository.save(new Professeur(null,"prof1","prof2","prof1@gmail.com","012345698",null));
 			Professeur p1 = professeurRepository.save(new Professeur(null,"prof2","prof2","prof2@gmail.com","044345688",null));
