@@ -1,0 +1,99 @@
+body{
+  background:#EDEDEE;
+}
+article{
+background:#FFF;
+padding:25px;
+border-radius: 10px 100px / 120px;
+ box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.rdbtn{
+	font-weight: bold;
+	border-radius: 10px 100px / 120px;
+}
+.btn-blog {
+    color: #ffffff;
+    background-color: #37d980;
+    border-color: #37d980;
+    border-radius:0;
+    margin-top: 5px;
+}
+
+.hquestion{
+
+box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+background:#FFF;
+border-radius: 10px;
+}
+
+
+.panel{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.single {
+    padding: 10px 15px;
+    margin-top: 0px;
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0; 
+    
+}
+
+.single ul {
+    margin-bottom: 0; 
+    
+}
+.single li a {
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f3f0f0;
+    line-height: 40px;
+    display: block;
+    text-decoration: none; 
+}
+    
+.single li a:hover {
+    color: #60B078; 
+}
+
+.navbar-down{
+	 box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+   border-top: 4px solid #60B078;
+}
+.input-field{
+  color: #000;
+}
+
+.text-white{
+    color:#fff;
+}
+
+.navbar-doublerow > .navbar{
+	display: block;
+	padding: 0px auto;
+	margin: 0px auto;
+	min-height: 25px;
+}
+
+/*Down nav*/
+.navbar-doublerow .navbar-down .navbar-brand {
+    /*navbar brand*/
+	padding: 0px auto;
+	float: left;
+	color: #60B078;
+	font-size: 30px;
+}
+.navbar-doublerow .navbar-down ul>li>a{
+    /*Menu items*/
+	font-size: 15px;
+	color: #000;
+}
+.navbar-doublerow .navbar-down ul>li>a:hover{
+    /*menu hover*/
+	border-bottom: 1px solid #60B078;
+	color: #60B078;
+}
+.align-items-center{
+align-content: center;
+}

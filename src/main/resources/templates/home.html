@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{dashboard}">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="../../css/styleforum.css" rel="stylesheet" />
+<title>Dashboard</title>
+</head>
+<body class="hold-transition sidebar-mini">
+<section layout:fragment="main_content2">
+				<div class="container-fluid">
+	<div class="card" style=" height: 500px;overflow-y: auto;">
+  <div class="card-header">
+   List of  Forums
+  </div>
+  <div class="card-body">
+  <div class="row md-8" >
+  <div class="col-sm-4 mt-2 forum-item" th:each="p:${listforum}">
+    <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height: 200px;width: 331px;" >
+      <div class="card-body">
+      <div class="d-flex justify-content-between" style="border-bottom: inset;">
+        <h5 class="card-title" style="padding-bottom: 10px;" th:text="${p.forumname}"></h5>
+        <em th:text="${p.user.username}" class="text-muted"></em>
+       </div>
+        <p class="card-text mt-2"  th:text="${#strings.length(p.contexte) > 60 ? #strings.substring(p.contexte, 0, 60) + '...' : p.contexte}"></p>
+       
+      
+        
+      </div>
+      <div class="card-footer ">
+       <a th:href="@{/showForumSpec/{id}(id=${p.forumId})}" class="btn btn-primary">More details</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  
+  </div>
+</div>
+	
+		</div>
+	</section>
+	
+</body>
+
+</html>

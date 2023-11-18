@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>forum</title>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="../../css/stylesIndex.css" rel="stylesheet" />
+</head>
+<body>
+
+			<!-- down nav -->
+		<nav class="navbar navbar-down">
+				<div class="container">
+					<div class="flex-container">
+						<div class="navbar-header flex-item">
+							<div class="navbar-brand" >DOCTORANT FORUM</div>
+						</div>
+						<ul class="nav navbar-nav flex-item hidden-xs">
+							<li><a th:href="@{/}"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+							
+							<li sec:authorize="!isAuthenticated()"><a th:href="@{/about}"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;About US</a></li>
+							
+							<li sec:authorize="isAuthenticated()"><a th:href="@{/dashboard}"><span class="glyphicon glyphicon-th-large"></span>&nbsp;Dashboard</a></li>
+							
+						</ul>
+						<ul  sec:authorize="!isAuthenticated()" class="nav navbar-nav flex-item hidden-xs pull-right">
+						
+							<a th:href="@{/login}" class="btn btn-sm btn-success" style="margin-top:5px;" ><span class="glyphicon glyphicon-user"></span> Sign In</a>
+							<a th:href="@{/register}" class="btn btn-sm btn-primary" style="margin-top:5px;"><span class="glyphicon glyphicon-certificate"></span> Register</a>
+						</ul>
+						<ul  sec:authorize="isAuthenticated()" class="nav navbar-nav flex-item hidden-xs pull-right">
+						
+        
+         <form th:action="@{/logout}" method="post" style="margin-top:5px;">
+         Welcome, <span sec:authentication="name" class="text-muted">User</span>! &nbsp;
+                        <input type="submit" class="btn btn-sm btn-primary"  value="Logout" />
+                        </form>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+		</nav>		<!-- /master nav -->
+		
+        		<div class="container body-content">
+			<div class="row">
+
+				<!-- left section -->
+				<div class="col-md-8">
+				<div style="text-align: right;margin-bottom: 2px;margin-top: 2px;padding: 2px;" >
+    <a th:href="@{/(page=${currentPage - 1})}" th:unless="${currentPage == 0}" >Previous</a>
+    <a th:href="@{/(page=${currentPage + 1})}" th:if="${currentPage + 1 < totalPages}" >Next</a>
+</div>	
+					<div class="page-header col-md-10 hquestion " style="align-content: center;">
+					
+  					<h1 class="">Can't find an answer?</h1>
+  					<p class="">Make  use of a qualified tutor to get the answer
+  					          
+  					<a class="btn btn-blog pull-right btn-lg rdbtns"  th:href="@{/createASK}">Ask Question?</a> 
+  					<div th:if="${error}" class="alert alert-danger" role="alert">
+        You need to Login first to Ask Question and create Your forum!
+    </div>  
+					</div>
+					
+					<div class="col-md-10 blogShort"  th:each="p:${listforum}">
+                     <h3 th:text="${p.forumname}"></h3>
+                        <em style="margin:5px;">Autheur <strong th:text="${p.user.username}" class="text-info"></strong></em>
+                     <article><p style="padding: 5px;" th:text="${#strings.length(p.contexte) > 100 ? #strings.substring(p.contexte, 0, 100) + '...' : p.contexte}">
+                          
+                         </p>
+                         </article>
+                          
+                     <a class="btn btn-blog pull-right marginBottom10" th:href="@{/showForumSpec/{id}(id=${p.forumId})}" >READ MORE</a> 
+                 </div>
+       
+                 
+    
+				</div>
+
+				<!-- right section -->
+				<div class="col-md-4">
+						  
+					<!-- Featured panel -->
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h4>Featured Categories</h4>
+						</div>
+						<div class="panel-body">
+                            <div class="single category">
+                                <ul class="list-unstyled">
+                                    <li><a href="" title="">Business <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">Technology <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">Web <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">Ecommerce <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">Wordpress <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">Android <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">IOS <span class="pull-right"></span></a></li>
+                                    <li><a href="" title="">Windows <span class="pull-right"></span></a></li>
+                                </ul>
+                            </div>
+						    
+							
+						</div>
+					</div>
+					<!-- Newsletter panel -->
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h4>Informations</h4>
+						</div>
+						<div class="panel-body ">
+							<p>This frum works towards organising and uniting everyone associated with Knowledge Economy sector. The areas of our intervention include IT.</p>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>Our localization</h4>
+						</div>
+						<div class="panel-body " style="text-align: center;">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.081213204977!2d-6.590930524275209!3d34.24647127308462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda759f9cb8abb07%3A0xd57193fc3b561ccf!2sFaculty%20of%20sciences!5e0!3m2!1sen!2sma!4v1700247448055!5m2!1sen!2sma" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</div> 
+				<!-- /right section -->
+			</div> 			<!-- /row -->
+		</div>		<!-- /container -->
+	
+</body>
+<footer style="padding: 20px;text-align: center;background: white;">
+		
+			<strong>Copyright &copy; Forum 2023 <a
+				href="https://fs.uit.ac.ma/">shcool panel</a>.
+			</strong> All rights reserved.
+		</footer>
+</html>

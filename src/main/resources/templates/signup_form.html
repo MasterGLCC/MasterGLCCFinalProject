@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Simple Login Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="../../css/login.css"/>
+</head>
+<body>
+<div class="login-form" >
+    <form id="loginForm" th:action="@{/process_register}" th:object="${user}" method="post">
+    <div class="imgdiv"><a th:href="@{/}"><img alt="uit" src="../../assets/img/uit.png" width="200px"></a></div>
+    
+        <h2 class="text-center">Registration - Sign Up</h2>  
+        <div th:if="${error}"class="alert alert-danger" role="alert">
+      This user Already exists 
+    </div>  
+        <div class="form-group">
+				
+				
+					<input type="text" th:field="*{username}" class="form-control" 
+							required minlength="2" maxlength="20" placeholder="User Name"/>
+				
+			</div>
+        	<div class="form-group">
+				
+				
+					<input type="text" th:field="*{firstName}" class="form-control" 
+							required minlength="2" maxlength="20" placeholder="First Name"/>
+				
+			</div>
+			
+			<div class="form-group">
+				
+				
+					<input type="text" th:field="*{lastName}" class="form-control" 
+							required minlength="2" maxlength="20"  placeholder="Last Name"/>
+				
+			</div>   
+      <div class="form-group">
+				
+				
+					<input type="email" th:field="*{email}" class="form-control" required placeholder="E-mail"/>
+				
+			</div>
+			
+			<div class="form-group">
+				
+					<input type="password" th:field="*{password}" class="form-control" 
+							required minlength="6"  placeholder="Password"/>
+				
+			</div>
+			
+		
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </div>
+        <div class="form-group imgdiv">  
+        you have account!<a th:href="@{/login}">&nbsp;Sign In Here</a>
+        </div>
+    </form>
+</div>
+
+</body>
+<footer>
+			
+			<strong>Copyright &copy; Forum 2023 <a
+				href="https://fs.uit.ac.ma/">Faculte of science</a>.
+			</strong> All rights reserved.
+		</footer>
+</html>            

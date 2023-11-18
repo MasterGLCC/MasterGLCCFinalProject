@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{dashboard}">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="../../css/styleforum.css" rel="stylesheet" />
+<title>show forum</title>
+
+</head>
+<body class="hold-transition sidebar-mini">
+<section layout:fragment="main_content2">
+				<div class="container-fluid">
+				<div class="card">
+  <div class="card-header">
+   	Add more comments
+  </div>
+  <div class="card-body">
+		<div style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-left: 4px;margin-right: 4px;padding: 20px;margin-bottom:10px; ">
+                    <div class="d-flex justify-content-between" style="border-bottom: inset;">
+                     <h3 th:text="${forum.forumname}" style="padding-bottom: 10px;"></h3>
+                    <em th:text="${forum.user.username}" class="text-muted"></em>
+                    </div>
+                    
+                     <article class="mt-2"><p style="padding: 5px;" th:text="${forum.contexte}">
+                         </p>
+                         </article>
+                 </div>
+                 <div  style=" height: 200px;overflow-y: auto;">
+                 
+                 <div class="alert alert-dark mt-4 d-flex justify-content-between" role="alert" th:each="p:${messageslist}" >
+                 <div>
+ <strong th:text="${p.user.username}"></strong><strong>:</strong>&nbsp;<span th:text="${p.contenu}">.
+ </span>
+ </div>
+ <div>
+
+  <a  th:href="@{/deleteMessage/{id}(id=${p.messageId})}" th:if="${p.user.username == userName}" class="nav-item text-light" title="delete"  onclick="return confirm('Are you sure!You want delete this comment!')"><i class="fa-solid fa-trash"></i></a>
+ </div>
+ 
+ 
+</div>
+ 
+
+</div>
+                 <div style="margin-left: 4px;margin-right: 4px;padding: 10px;">
+                <form  th:action="@{/sendMessage}" th:object="${message}" method="post" class="d-flex justify-content-between">
+   <div class="form-group col-md-10">
+				
+				
+					<input type="text"  class="form-control" required="required" minlength="2" maxlength="200" th:field="*{contenu}" placeholder="put your comment here ..."/>
+				
+				<span class="text-muted">maximum caracteres 200</span>
+			</div>
+			
+			
+			
+			
+			<div class="form-group col-md-1">
+            <button type="submit" class="btn btn-primary btn-block">Comment</button>
+        </div>
+        
+			</form>
+                 
+                 
+                 </div>
+  </div>
+ 
+</div>
+				</div>
+</section>
+</body>
+</html>
+
+
+	
+

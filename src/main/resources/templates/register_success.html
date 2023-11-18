@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>register success</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{
+background-color: #EDEDEE;
+}
+  .card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card-img-top {
+    width: 25%; /* Adjust the size of the image */
+    margin: 0 auto; /* Centers the image */
+    display: block;
+    padding-top: 10px; /* Adds some space between the top of the card and the image */
+  }
+</style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8" style="left: 15%;">
+      <div class="card card-shadow ">
+        <img  src="../../assets/img/sucesslogin.png" class="card-img-top" alt="sucess" >
+        <div class="card-body" style="text-align: center;;">
+          <h3 class="card-text mb-4">You have signed up successfully!</h3>
+          <a th:href="@{/login}" class="btn btn-primary">Click here to Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

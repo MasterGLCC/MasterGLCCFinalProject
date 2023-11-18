@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{dashboard}">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="../../css/styleforum.css" rel="stylesheet" />
+<title>update forum</title>
+
+</head>
+<body class="hold-transition sidebar-mini">
+<section layout:fragment="main_content2">
+				<div class="container-fluid">
+				<div class="card">
+  <div class="card-header">
+    Update Forum
+  </div>
+  <div class="card-body">
+  <form  th:action="@{/sendeditForum}" th:object="${forum}" method="post">
+  <input type="hidden" class="form-control" th:field="*{forumId}" />
+   <div class="form-group mx-4">
+				
+				
+					<input type="text" th:field="*{forumname}" class="form-control w-75" 
+							required minlength="2" maxlength="45" placeholder="Forum name"/>
+				
+			</div>
+			<div class="form-group mx-4 mt-3">
+				
+				
+					<textarea  th:field="*{contexte}" class="  form-control" 
+							required minlength="2" maxlength="500" placeholder="Context here..." ></textarea>
+							<span class="text-muted">maximum is 500 characters</span>
+				
+			</div>
+			
+			
+			
+			<div class="form-group m-4 ">
+            <button type="submit" class="btn btn-primary btn-block w-25">Update</button>
+        </div>
+			</form>
+  </div>
+ 
+</div>
+				</div>
+</section>
+</body>
+</html>
+
+
+	
+

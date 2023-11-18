@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{dashboard}">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="../../css/styleforum.css" rel="stylesheet" />
+<title>Our Forums</title>
+</head>
+<body class="hold-transition sidebar-mini">
+<section layout:fragment="main_content2">
+				<div class="container-fluid">
+				
+	<div class="card" style=" height: 500px;overflow-y: auto;">
+  <div class="card-header">
+   List of Our Forums
+  </div>
+  <div class="card-body">
+  <div class="row md-8" >
+   <div th:if="${error}" class="alert alert-danger mt-2 mb-2" role="alert">
+        Your are not authorized !
+    </div> 
+  <div class="col-sm-4 mt-2 forum-item" th:each="p:${listforum}">
+    <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);height: 179px;width: 331px;">
+      <div class="card-body">
+        <h5 class="card-title" style="border-bottom: inset;padding-bottom: 10px;" th:text="${p.forumname}"></h5>
+        <p class="card-text"  th:text="${#strings.length(p.contexte) > 60 ? #strings.substring(p.contexte, 0, 60) + '...' : p.contexte}"></p>
+        
+      </div>
+      <div class="card-footer">
+      <div class="d-flex justify-content-around">
+        <a th:href="@{/showForumSpec/{id}(id=${p.forumId})}" class="btn btn-primary">More details</a>
+        <a th:href="@{/editForum/{id}(id=${p.forumId})}" class="btn btn-secondary ">Update</a>
+        <a th:href="@{/deleteForumSpec/{id}(id=${p.forumId})}" class="btn btn-danger " onclick="return confirm('Are you sure!You want delete this Forum!')">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  </div>
+</div>
+	
+		</div>
+	</section>
+	
+</body>
+
+</html>

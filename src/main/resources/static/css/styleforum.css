@@ -1,0 +1,16 @@
+ .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .btn {        
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 2px;
+    
+    }
+    
+.form-control:focus {  
+	border-color: #2986CC;
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  outline: 0 none;
+}
