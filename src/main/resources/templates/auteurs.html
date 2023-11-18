@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+        <div class="container-fluid">
+            <h2>Auteurs</h2>
+            <a href="/auteur/new" class="btn btn-success"><i class="fa fa-plus"></i> Ajouter Auteur</a>
+            <br><br>
+            <table class="table table-striped">
+                <tr>
+                    <th>Auteur</th>
+                    <th>Date Contribution</th>
+                    <th class="text-center">Actions</th>
+                </tr>  
+                <tr th:each = "auteur : ${auteurs}">
+                    <td th:text="${auteur.role}"></td>
+                    <td th:text="${#dates.format(auteur.dateContribution, 'yyyy-MM-dd')}"></td>
+                    <td class="col-actions">
+                        <a th:href="@{/auteur/{id}(id=${auteur.auteurid})}" class="btn btn-default"><i class="fa fa-eye"></i> Afficher</a>
+                        <a th:href="@{/auteur/edit/{id}(id=${auteur.auteurid})}" class="btn btn-primary"><i class="fa fa-edit"></i> Modifier</a>
+                        <a th:href="@{/auteur/delete/{id}(id=${auteur.auteurid})}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer?')" class="btn btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

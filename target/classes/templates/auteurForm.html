@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+        <div class="container-fluid">
+            <h2>[[${title}]]</h2>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-md-4">
+                        <form th:object="${auteur}" th:action="@{/saveAuteur}" action="#" method="post">
+                            <input type="hidden" th:field="*{auteurid}"/>
+                            <div class="form-group">
+                                Auteur:<input type="text" th:field="*{role}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Auteur" />
+                                <p th:if="${#fields.hasErrors('role')}" th:errors="*{role}" th:errorclass="invalid-feedback">Erreur Auteur</p>
+                            </div>
+                            <div class="form-group">
+                                Date Contribution:<input type="date" th:field="*{dateContribution}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Date" />
+                                <p th:if="${#fields.hasErrors('dateContribution')}" th:errors="*{dateContribution}" th:errorclass="invalid-feedback">Erreur Date</p>
+                            </div>
+                            <div class="form-group">
+                                <a class="btn btn-default" href="/auteurs"><i class="fa fa-arrow-left"></i> Revenir</a>
+                                <button type="submit" class="btn btn-login"/>
+                                <i class="fa fa-hdd-o"></i> Enregistrer
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<div class="container-fluid">
+    <h2>Ajouter Auteur</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form th:action="@{/publication/{id}/auteurs(id=${publication.id})}" method="get" enctype="multipart/form-data">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Information Publications</div>
+                        <div class="panel-body" style="padding-left: 15px;">
+                            Titre: <b th:text="${publication.titre}" /> <br/>
+                            <br/>Auteurs:
+                            <span th:each="auteur : ${publication.auteurs}">
+                                    <br/>&nbsp;&nbsp;<span th:text="${auteur.role}" />
+                                </span>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="auteurId">
+                            <option th:each="auteur : ${auteurs}"
+                                    th:value="${auteur.auteurid}"
+                                    th:text="${auteur.role}">Auteur</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <a class="btn btn-default" href="/publications"><i class="fa fa-arrow-left"></i> Revenir</a>
+                        <button type="submit" name="action" value="save" class="btn btn-login"/>
+                        <i class="fa fa-hdd-o"></i> Enregistrer
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
