@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ce9bfb46-a33f-4976-9a9d-144164b0fe4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../GMF/MLP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GMF/MLP/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GMF/MLP/src/main/java/com/RecommenderSystem/MLP/Service/MLPRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GMF/MLP/src/main/java/com/RecommenderSystem/MLP/Service/MLPRecommender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GMF/MLP/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../GMF/MLP/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MLP/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/Controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/Controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/Controllers/MovieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/MlpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/MlpApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/Service/MLPRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLP/src/main/java/com/RecommenderSystem/MLP/Service/MLPRecommender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLP/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MLP/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/allbut.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/mku.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u.genre" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u.item" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u.occupation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u1.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u1.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u2.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u2.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u3.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u3.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u4.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u4.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u5.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/u5.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/ua.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/ua.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/ub.base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/ml-100k/ub.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MLPRecommender/MLP/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/Configuration/RecommenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/Configuration/RecommenderConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/Controllers/RecommenderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/Controllers/RecommenderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/MlpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/MlpApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/Services/RecommenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/java/com/RecommenderSystem/MLP/Services/RecommenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MLPRecommender/MLP/src/main/resources/templates/recommendations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Configuration/MovieDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Configuration/MovieDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/MLPRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/MLPRecommender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/resources/templates/movie-recommendationsMLP.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet-rec/RecommenderSystem/src/main/resources/templates/movie-recommendationsMLP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/chartDeepMF.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/chartDeepMF.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/MLPRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/MLPRecommender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_init/RecommenderSystem/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringNCCF.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringNCCF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/MLPRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/java/com/collaborativeFiltering/RecommenderSystem/Services/MLPRecommender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/resources/templates/movie-recommendationsNCCF.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet_rec/RecommenderSystem/src/main/resources/templates/movie-recommendationsNCCF.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecommenderSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RecommenderSystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecommenderSystem/src/main/java/com/example/collaborativeFiltering/RecommenderSystem/Configuration/MovieDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecommenderSystem/src/main/java/com/example/collaborativeFiltering/RecommenderSystem/Configuration/MovieDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecommenderSystem/src/main/java/com/example/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecommenderSystem/src/main/java/com/example/collaborativeFiltering/RecommenderSystem/Controllers/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecommenderSystem/src/main/java/com/example/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecommenderSystem/src/main/java/com/example/collaborativeFiltering/RecommenderSystem/Services/CollaborativeFilteringService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecommenderSystem/target/test-classes/com/example/collaborativeFiltering/RecommenderSystem/RecommenderSystemApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RecommenderSystem/target/test-classes/com/example/collaborativeFiltering/RecommenderSystem/RecommenderSystemApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2YN3QeGFtPgrTmEpv62Y50ds9gS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TheseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="These" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.These.TheseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce9bfb46-a33f-4976-9a9d-144164b0fe4f" name="Changes" comment="" />
+      <created>1700352201572</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700352201572</updated>
+      <workItem from="1700352230642" duration="1637000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
