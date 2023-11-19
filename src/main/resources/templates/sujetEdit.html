@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+
+<meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Forma Développement</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/images/data-management.png" rel="icon">
+  <link href="/images/data-management.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/css/style.css" rel="stylesheet">
+
+  <!--Bootstrap for sidenar-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!--side baar menu-->
+  <div class="container-fluid" >
+    <div class="row flex-nowrap" >
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="sidebar-me">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline"></span>
+                    <div class="dropdown pb-4">
+                      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="images/hero-img.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                          <span class="d-none d-sm-inline mx-1">Professeur</span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                          <li><a class="dropdown-item" href="/">Sign out</a></li>
+                      </ul>
+                  </div>
+                </a>
+
+              
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Accueil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="sujetRegister" class="nav-link px-0"> <span class="d-none d-sm-inline">
+                                  <i class="bi bi-file-earmark-plus-fill"></i>
+                                  Ajouter Sujet</span></a>
+                            </li>
+                            <li>
+                                <a href="affichage" class="nav-link px-0"> <span class="d-none d-sm-inline">
+                                  <i class="bi bi-sliders"></i>
+                                  Consulter les sujets</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <hr>
+             
+            </div>
+        </div>
+        
+        <div class="col py-3">
+ <!-- ======= Contact Section ======= -->
+ <section id="contact" class="contact">
+
+  <div class="container" data-aos="fade-up" >
+
+    <div class="section-title">
+      <h2>Modifier Sujet de Thèse</h2>
+      <p style="color: red;">Veuillez modifier la forme ci dessous !</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-3 mt-2 mt-lg-0 d-flex align-items-stretch">
+      
+
+      </div>
+	
+	<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+		
+		<form role="form" class="php-email-form" th:action="@{/saveSujet}" method="post" th:object="${sujet}" >
+			<input type="hidden" name="sujetTheseID" th:value="${sujet.sujetTheseID}"/>
+			<div class="mb-3">
+				<label for="titre" >Titre
+					</label> <input type="text" id="titre" class="form-control" name="titre" th:value="${sujet.titre}">	
+			</div>
+			
+			<div class="form-group">
+				<label for="motsCles" >Mots Cles
+					</label> <input type="text" id="motsCles" class="form-control"  name="motsCles" th:value="${sujet.motsCles}">	
+			</div>
+			 <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description"  name="description" rows="10" th:field="*{description}"></textarea>
+           </div>						
+			<center><button type="submit" class="btn btn-primary">Modifier Sujet</button></center>
+		</form>
+	</div>
+	
+
+ 
+
+
+
+
+<!-- Vendor JS Files -->
+<script src="/vendor/aos/aos.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/vendor/php-email-form/validate.js"></script>
+<script src="/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/js/main.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
