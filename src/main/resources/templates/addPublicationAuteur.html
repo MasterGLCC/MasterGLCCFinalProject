@@ -17,16 +17,16 @@
                             Titre: <b th:text="${publication.titre}" /> <br/>
                             <br/>Auteurs:
                             <span th:each="auteur : ${publication.auteurs}">
-                                    <br/>&nbsp;&nbsp;<span th:text="${auteur.role}" />
+                                    <br/>&nbsp;&nbsp;<span th:text="${auteur.nom} " />
                                 </span>
                             <br/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" name="auteurId">
+                        <select class="form-control" name="identifiant">
                             <option th:each="auteur : ${auteurs}"
-                                    th:value="${auteur.auteurid}"
-                                    th:text="${auteur.role}">Auteur</option>
+                                    th:value="${auteur.identifiant}"
+                                    th:text="${auteur.auteurType == 'PROFESSEUR' ? 'Professeur ' + auteur.prenom + ' ' + auteur.nom : auteur.prenom+ ' ' + auteur.nom}">Auteur</option>
                         </select>
                     </div>
                     <div class="form-group">

@@ -1,35 +1,199 @@
+
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head lang="en">
-        <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
-    </head>
-    <body>
-        <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-        <div class="container-fluid">
-            <h2>[[${title}]]</h2>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="col-md-4">
-                        <form th:object="${auteur}" th:action="@{/saveAuteur}" action="#" method="post">
-                            <input type="hidden" th:field="*{auteurid}"/>
-                            <div class="form-group">
-                                Auteur:<input type="text" th:field="*{role}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Auteur" />
-                                <p th:if="${#fields.hasErrors('role')}" th:errors="*{role}" th:errorclass="invalid-feedback">Erreur Auteur</p>
-                            </div>
-                            <div class="form-group">
-                                Date Contribution:<input type="date" th:field="*{dateContribution}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Date" />
-                                <p th:if="${#fields.hasErrors('dateContribution')}" th:errors="*{dateContribution}" th:errorclass="invalid-feedback">Erreur Date</p>
-                            </div>
-                            <div class="form-group">
-                                <a class="btn btn-default" href="/auteurs"><i class="fa fa-arrow-left"></i> Revenir</a>
-                                <button type="submit" class="btn btn-login"/>
-                                <i class="fa fa-hdd-o"></i> Enregistrer
-                                </button>
-                            </div>
-                        </form>
+<head lang="en">
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<div class="container-fluid">
+    <h2>[[${title}]]</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-4">
+                <form th:object="${auteur}" th:action="@{/saveAuteur}" action="#" method="post">
+                    <input type="hidden" th:field="*{identifiant}"/>
+                    <div class="form-group">
+                        Nom:<input type="text" th:field="*{nom}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Nom" />
+                        <p th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}" th:errorclass="invalid-feedback">Erreur Nom</p>
                     </div>
-                </div>
+                    <div class="form-group">
+                        Prenom:<input type="text" th:field="*{prenom}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Prenom" />
+                        <p th:if="${#fields.hasErrors('prenom')}" th:errors="*{prenom}" th:errorclass="invalid-feedback">Erreur Prenom</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="auteurType">Type d'Auteur</label>
+                        <select id="auteurType" class="form-control" th:field="*{auteurType}" onchange="showFields()">
+                            <option value="">Sélectionnez le type d'auteur</option>
+                            <option value="DOCTORANT" th:selected="${auteur.auteurType == 'DOCTORANT'}">Doctorant</option>
+                            <option value="PROFESSEUR" th:selected="${auteur.auteurType == 'PROFESSEUR'}">Professeur</option>
+                        </select>
+                    </div>
+                    <div id="specificFieldsContainer"></div>
+
+                    <div class="form-group">
+                        <a class="btn btn-default" href="/auteurs"><i class="fa fa-arrow-left"></i> Revenir</a>
+                        <button type="submit" class="btn btn-login"/>
+                        <i class="fa fa-hdd-o"></i> Enregistrer
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+<script th:inline="javascript">
+    function showFields() {
+        var selectedType = document.getElementById("auteurType").value;
+
+        // Supprimer le div existant s'il y en a un
+        var existingDiv = document.getElementById("specificFieldsContainer");
+        while (existingDiv.firstChild) {
+            existingDiv.removeChild(existingDiv.firstChild);
+        }
+
+        // Créer un nouveau div
+        var dynamicFieldsDiv = document.createElement("div");
+
+        // Ajouter les champs spécifiques en fonction du type d'auteur sélectionné
+        if (selectedType === "DOCTORANT") {
+            dynamicFieldsDiv.innerHTML = `
+                <div class="form-group">
+                <label>Apogee:</label>
+                    <input type="text" name="apogee" class="form-control" placeholder="Apogee" />
+                </div>
+                <div class="form-group">
+                <label>CNE:</label>
+                    <input type="text" name="cne" class="form-control" placeholder="CNE" />
+                </div>`;
+        } else if (selectedType === "PROFESSEUR") {
+            dynamicFieldsDiv.innerHTML = `
+                        <div class="form-group">
+                            <label>Etablissement:</label>
+                            <input type="text" name="etablissement" class="form-control" placeholder="Etablissement" />
+                        </div>
+                        <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <select id="grade" name="grade" class="form-control" >
+                        <option value="Professeur_Associé">Professeur Associé</option>
+                        <option value="Professeur_Assistant">Professeur Assistant</option>
+                        <option value="Professeur_Titulaire">Professeur Titulaire</option>
+                    </select>
+                    </div>
+                        <div class="form-group">
+                            <label>Spécialité:</label>
+                            <input type="text" name="specialite" class="form-control" placeholder="Spécialité" />
+                        </div>
+                    </div>
+
+
+            `
+        }
+
+        // Ajouter le nouveau div à la structure HTML
+        document.getElementById("specificFieldsContainer").appendChild(dynamicFieldsDiv);
+    }
+</script>
+</body>
 </html>
+
+
+<!--<!DOCTYPE HTML>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head lang="en">-->
+<!--    &lt;!&ndash;/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;/*/ <th:block th:include="fragments/header :: header"></th:block> /*/&ndash;&gt;-->
+<!--<div class="container-fluid">-->
+<!--    <h2>[[${title}]]</h2>-->
+<!--    <div class="panel panel-default">-->
+<!--        <div class="panel-body">-->
+<!--            <div class="col-md-4">-->
+<!--                <form th:object="${auteur}" th:action="@{/saveAuteur}" action="#" method="post">-->
+<!--                    <input type="hidden" th:field="*{identifiant}"/>-->
+<!--                    <div class="form-group">-->
+<!--                        Nom:<input type="text" th:field="*{nom}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Nom" />-->
+<!--                        <p th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}" th:errorclass="invalid-feedback">Erreur Nom</p>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        Prenom:<input type="text" th:field="*{prenom}" th:errorclass="invalid-feedback-input" class="form-control" placeholder="Prenom" />-->
+<!--                        <p th:if="${#fields.hasErrors('prenom')}" th:errors="*{prenom}" th:errorclass="invalid-feedback">Erreur Prenom</p>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <label for="auteurType">Type d'Auteur</label>-->
+<!--                        <select id="auteurType" class="form-control" th:field="*{auteurType}" th:disabled="${auteur.identifiant}">-->
+<!--                            <option value="DOCTORANT" th:selected="${auteur.auteurType == 'DOCTORANT'}">Doctorant</option>-->
+<!--                            <option value="PROFESSEUR" th:selected="${auteur.auteurType == 'PROFESSEUR'}">Professeur</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                    <div id="specificFieldsContainer"></div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <a class="btn btn-default" href="/auteurs"><i class="fa fa-arrow-left"></i> Revenir</a>-->
+<!--                        <button type="submit" class="btn btn-login"/>-->
+<!--                        <i class="fa fa-hdd-o"></i> Enregistrer-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<script th:inline="javascript">-->
+<!--    document.addEventListener("DOMContentLoaded", function () {-->
+<!--        showFields(); // Call the function on page load to display specific fields if needed-->
+<!--    });-->
+
+<!--    function showFields() {-->
+<!--        var selectedType = document.getElementById("auteurType").value;-->
+
+<!--        // Supprimer le div existant s'il y en a un-->
+<!--        var existingDiv = document.getElementById("specificFieldsContainer");-->
+<!--        while (existingDiv.firstChild) {-->
+<!--            existingDiv.removeChild(existingDiv.firstChild);-->
+<!--        }-->
+
+<!--        // Créer un nouveau div-->
+<!--        var dynamicFieldsDiv = document.createElement("div");-->
+
+<!--        // Ajouter les champs spécifiques en fonction du type d'auteur sélectionné-->
+<!--        if (selectedType === "DOCTORANT") {-->
+<!--            dynamicFieldsDiv.innerHTML = `-->
+<!--                <div class="form-group">-->
+<!--                    <label>Apogee:</label>-->
+<!--                    <input type="text" name="apogee" class="form-control" placeholder="Apogee" value="${auteur.apogee || ''}" />-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>CNE:</label>-->
+<!--                    <input type="text" name="cne" class="form-control" placeholder="CNE" value="${auteur.cne || ''}" />-->
+<!--                </div>`;-->
+<!--        } else if (selectedType === "PROFESSEUR") {-->
+<!--            dynamicFieldsDiv.innerHTML = `-->
+<!--                <div class="form-group">-->
+<!--                    <label>Etablissement:</label>-->
+<!--                    <input type="text" name="etablissement" class="form-control" placeholder="Etablissement" value="${auteur.etablissement || ''}" />-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="grade">Grade:</label>-->
+<!--                    <select id="grade" name="grade" class="form-control">-->
+<!--                        <option value="Professeur_Associé" th:selected="${auteur.grade == 'Professeur_Associé'}">Professeur Associé</option>-->
+<!--                        <option value="Professeur_Assistant" th:selected="${auteur.grade == 'Professeur_Assistant'}">Professeur Assistant</option>-->
+<!--                        <option value="Professeur_Titulaire" th:selected="${auteur.grade == 'Professeur_Titulaire'}">Professeur Titulaire</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Spécialité:</label>-->
+<!--                    <input type="text" name="specialite" class="form-control" placeholder="Spécialité" value="${auteur.specialite || ''}" />-->
+<!--                </div>`;-->
+<!--        }-->
+
+<!--        // Ajouter le nouveau div à la structure HTML-->
+<!--        document.getElementById("specificFieldsContainer").appendChild(dynamicFieldsDiv);-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+

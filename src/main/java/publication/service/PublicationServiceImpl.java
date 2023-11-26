@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PublicationServiceImpl {
 
-    @Autowired
+
     private final PublicationRepository repository;
 
     @Autowired

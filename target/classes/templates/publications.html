@@ -10,6 +10,7 @@
     <a href="/publication/new" class="btn btn-success"><i class="fa fa-plus"></i> Ajouter publication</a>
     <br><br>
     <table class="table table-striped">
+        <thead>
         <tr>
             <th>Titre</th>
             <th>Resume</th>
@@ -19,25 +20,38 @@
             <th>Auteurs</th>
             <th class="text-center">Actions</th>
         </tr>
+        </thead>
+        <tbody>
         <tr th:each="publication : ${publications}">
-            <td th:text="${publication.titre}"> </td>
+            <td th:text="${publication.titre}"></td>
             <td th:text="${publication.resume}"></td>
             <td>
-                <span th:if="${publication.article != null}"><p>Le dossier de l’article est présent</p></span>
+                <span th:if="${publication.article != null}">
+                    <a th:href="@{'/viewFile/' + ${publication.id} + '/article'}" target="_blank">Voir</a>
+                    <a th:href="@{'/downloadFile/' + ${publication.id} + '/article'}" download>Telecharger</a>
+                </span>
                 <span th:if="${publication.article == null}"><p>Aucun dossier d’article</p></span>
             </td>
             <td>
-                <span th:if="${publication.code != null}"><p>Le fichier de code est présent</p></span>
+                <span th:if="${publication.code != null}">
+                    <a th:href="@{'/downloadFile/' + ${publication.id} + '/code'}" download>Telecharger</a>
+                </span>
                 <span th:if="${publication.code == null}"><p>Aucun dossier de code</p></span>
             </td>
             <td>
-                <span th:if="${publication.certificat != null}"><p>Le fichier de certificat est présent</p></span>
+                <span th:if="${publication.certificat != null}">
+                    <a th:href="@{'/viewFile/' + ${publication.id} + '/certificat'}" target="_blank">Voir</a>
+                    <a th:href="@{'/downloadFile/' + ${publication.id} + '/certificat'}" download>Telecharger</a>
+                </span>
                 <span th:if="${publication.certificat == null}"><p>Aucun dossier de certificat</p></span>
             </td>
             <td>
-            <span th:each="auteur, iterStat : ${publication.auteurs}">
-                    <span th:text="${auteur.role}" /><th:block th:if="${!iterStat.last}">,</th:block>
+                <span th:each="auteur, iterStat : ${publication.auteurs}">
+                    <span th:text="${auteur.auteurType == 'PROFESSEUR' ? 'Professeur ' + auteur.nom + ' ' + auteur.prenom : auteur.prenom + ' ' + auteur.nom}" />
+                     <th:block th:if="${!iterStat.last}">,</th:block>
                 </span>
+
+
             </td>
             <td class="col-actions">
                 <a th:href="@{/addPublicationAuteur/{id}(id=${publication.id})}" class="btn btn-default"><i class="fa fa-plus"></i> Auteur</a>
@@ -45,7 +59,9 @@
                 <a th:href="@{/publication/delete/{id}(id=${publication.id})}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer?')" class="btn btn-danger"><i class="fa fa-trash"></i> Supprimer</a>
             </td>
         </tr>
+        </tbody>
     </table>
+
 </div>
 </body>
 </html>

@@ -90,10 +90,15 @@ public class Publication{
     public void setCertificat(byte[] certificat) {this.certificat = certificat;}
 
 
-    @ManyToMany(cascade = CascadeType.MERGE)
+    /*@ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "publication_auteur", joinColumns = {
         @JoinColumn(name = "id")}, inverseJoinColumns = {
         @JoinColumn(name = "auteurid")
+    })*/
+    @ManyToMany(cascade = CascadeType.MERGE)
+    @JoinTable(name = "publication_auteurs", joinColumns = {
+            @JoinColumn(name = "publication_id")}, inverseJoinColumns = {
+            @JoinColumn(name = "auteurid")
     })
     public Set<Auteur> getAuteurs() {
         return this.auteurs;
@@ -105,7 +110,7 @@ public class Publication{
 
     public boolean hasAuteur(Auteur auteur) {
         for (Auteur publicationAuteur : getAuteurs()) {
-            if (publicationAuteur.getAuteurid() == auteur.getAuteurid()) {
+            if (publicationAuteur.getIdentifiant() == auteur.getIdentifiant()) {
                 return true;
             }
         }

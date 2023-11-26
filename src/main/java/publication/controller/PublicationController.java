@@ -1,18 +1,27 @@
 package publication.controller;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import publication.dto.PublicationDto;
 import publication.entity.Publication;
 import publication.entity.Auteur;
 import publication.service.PublicationServiceImpl;
 import publication.service.AuteurServiceImpl;
-
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import javax.validation.Valid;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.math.BigInteger;
 import java.util.List;
@@ -123,9 +132,9 @@ public class PublicationController {
     }
 
     @RequestMapping(value = "publication/{id}/auteurs", method = RequestMethod.GET)
-    public String publicationsAddAuteur(@RequestParam(value = "action", required = true) String action, @PathVariable Long id, @RequestParam Long auteurId, Model model) {
+    public String publicationsAddAuteur(@RequestParam(value = "action", required = true) String action, @PathVariable Long id, @RequestParam Long identifiant, Model model) {
         Publication publication = publicationService.findPublicationById(id);
-        Auteur auteur = auteurService.findAuteurById(auteurId);
+        Auteur auteur = auteurService.findAuteurById(identifiant);
 
         if (!publication.hasAuteur(auteur)) {
             publication.getAuteurs().add(auteur);
@@ -136,10 +145,86 @@ public class PublicationController {
         return "redirect:/publications";
     }
 
-    @RequestMapping(value = "getpublications", method = RequestMethod.GET)
-    public @ResponseBody
-    List<Publication> getpublications() {
-        return (List<Publication>) publicationService.findAllPublications();
+   @RequestMapping(value = "getpublications", method = RequestMethod.GET)
+   @ResponseBody
+   public List<PublicationDto> getPublications() {
+       List<Publication> publications = publicationService.findAllPublications();
+       List<PublicationDto> publicationDtos = new ArrayList<>();
+
+       for (Publication publication : publications) {
+           PublicationDto dto = new PublicationDto();
+           dto.setId(publication.getId());
+           dto.setTitre(publication.getTitre());
+           dto.setResume(publication.getResume());
+
+           dto.setArticle(Base64.getEncoder().encodeToString(publication.getArticle()));
+           dto.setCode(Base64.getEncoder().encodeToString(publication.getCode()));
+           dto.setCertificat(Base64.getEncoder().encodeToString(publication.getCertificat()));
+           publicationDtos.add(dto);
+       }
+
+       return publicationDtos;
+   }
+    @GetMapping("/viewFile/{id}/{fileType}")
+    public ResponseEntity<Resource> viewFile(@PathVariable Long id, @PathVariable String fileType) {
+        Publication publication = publicationService.findPublicationById(id);
+        byte[] fileData = getFileData(publication, fileType);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(getMediaType(fileType));
+        headers.set("Content-Disposition", "inline");
+
+        return new ResponseEntity<>(new ByteArrayResource(fileData), headers, HttpStatus.OK);
+    }
+
+    @GetMapping("/downloadFile/{id}/{fileType}")
+    public ResponseEntity<Resource> downloadFile(@PathVariable Long id, @PathVariable String fileType) {
+        Publication publication = publicationService.findPublicationById(id);
+        byte[] fileData = getFileData(publication, fileType);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        headers.set("Content-Disposition", "attachment; filename=" + getFileName(publication, fileType));
+
+        return new ResponseEntity<>(new ByteArrayResource(fileData), headers, HttpStatus.OK);
+    }
+
+    private byte[] getFileData(Publication publication, String fileType) {
+        switch (fileType) {
+            case "article":
+                return publication.getArticle();
+            case "code":
+                return publication.getCode();
+            case "certificat":
+                return publication.getCertificat();
+            default:
+                throw new IllegalArgumentException("Invalid file type");
+        }
+    }
+
+    private MediaType getMediaType(String fileType) {
+        switch (fileType) {
+            case "article":
+            case "certificat":
+                return MediaType.APPLICATION_PDF;
+            case "code":
+
+            default:
+                throw new IllegalArgumentException("Invalid file type");
+        }
+    }
+
+    private String getFileName(Publication publication, String fileType) {
+        switch (fileType) {
+            case "article":
+                return "article.pdf";
+            case "code":
+                return "code.zip";
+            case "certificat":
+                return "certificat.zip";
+            default:
+                throw new IllegalArgumentException("Invalid file type");
+        }
     }
 }
 
